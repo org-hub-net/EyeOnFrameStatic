@@ -50,14 +50,16 @@
            
             
             if(window.location.hostname !== '127.0.0.1'){
-                 coverImg.layout.displayData({value: "https://res.cloudinary.com/${cloudName}/video/upload/site/media//Bresson.png",type:"imageSource"});
+                 coverImg.layout.displayData({value: "https://res.cloudinary.com/${cloudName}/video/upload/media/Bresson.png",type:"imageSource"});
+                 imgIntro.layout.addImgSource("https://res.cloudinary.com/${cloudName}/video/upload/images/Logo3TemplateEyeblack.png");
             } else{
               coverImg.layout.displayData({value: "./media/Bresson.png",type:"imageSource"});
+              imgIntro.layout.addImgSource("./images/Logo3TemplateEyeblack.png");
             }
        
 
             creatorLine.layout.displayData({value: "Tasos Niopas",type:"innerHTML"});
-            imgIntro.layout.addImgSource("./images/Logo3TemplateEyeblack.png");
+            
             iArea.layout.setObjectInPage();
 
         }
