@@ -1,8 +1,8 @@
 const cloudName = 'dhe89ckz0'; // <-- Βάλε το δικό σου
 
 const config = {
-  imagesBasePath: `https://res.cloudinary.com/${cloudName}/image/upload/site/images/`,
-  mediaBasePath: `https://res.cloudinary.com/${cloudName}/video/upload/site/media/`
+  imagesBasePath: `https://res.cloudinary.com/${cloudName}/image/upload/images/`,
+  mediaBasePath: `https://res.cloudinary.com/${cloudName}/video/upload/media/`
 };
 
 export default config;
