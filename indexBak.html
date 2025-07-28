@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EyeOnFrame</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Main Styling -->
+  <link href="css/mainMobile.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/indexVideo.css" rel="stylesheet">
+    <link href="css/indexPhoto.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+    <style>
+ 
+/* mobile screens */
+
+
+/*---------------   MAIN  MOBILE General  ----------------*/
+
+
+
+/* Portrait Orientation */
+@media (orientation: portrait) {
+    .main-videos {
+        flex-direction: column; /* Stack video and images in portrait */
+    }
+
+    .mini {
+        flex: 0 0 100%; /* Full width per image */
+    }
+
+    .video {
+        margin-bottom: 20px;
+    }
+}
+
+/* Landscape Orientation */
+@media (orientation: landscape) {
+    .main-videos {
+        flex-direction: row; /* Side-by-side layout */
+    }
+
+    .video {
+        flex: 0 0 50%; /* 50% width for video */
+    }
+
+    ul {
+        flex: 0 0 50%; /* 50% width for ul */
+    }
+
+    .mini {
+        flex: 0 0 50%; /* Two images per row */
+    }
+	
+    .footer-ul{
+      max-width: 100%;
+    }
+    .single-channel h4 {
+			font-size : 0.8em;
+		}
+		.single-channel p{
+			font-size : 0.6em;
+		}
+		.views {
+			margin-bottom : 0;
+		}
+		.mini h4{
+			font-size : 0.9em;
+		}
+		
+		.line-video h4 {
+			font-size : 1.2em;
+		}
+
+
+}
+
+
+
+
+
+/* Queries for Mobile Brands */
+
+
+  /*---------------     IPHONE SE ----------------*/
+
+   /* Extra Small Screens (iPhone SE Landscape) */
+   @media  (min-width: 370px) and (max-width: 667px) and (orientation: landscape) {
+    /* Στυλ για iPhone SE (2nd & 3rd Gen) σε landscape */
+    @media (pointer: coarse) {
+    .responsive-div {
+      width: 300px;
+      height: 220px;
+      }
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .video h2{
+      font-size : 100%;
+    }
+    .mini h4 {
+      font-size : 0.8em;
+    }
+    .mini p{
+      font-size : 70%;
+    }
+    .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    .video p{
+        font-size : 0.7em;
+        margin : 0;
+
+      }
+      .mini p {
+          margin-top : 0px;
+        }
+
+      .single-channel h4 {
+			font-size : 0.8em;
+		}
+		.single-channel p{
+			font-size : 0.6em;
+		}
+		.views {
+			margin-bottom : 0;
+		}
+		.mini h4{
+			font-size : 0.9em;
+		}
+		
+		.line-video h4 {
+			font-size : 1.2em;
+		}
+
+      
+    }
+  }
+     /* Extra Small Screens (iPhone 12 Pro Portrait) */
+     @media (min-width: 370px) and (max-width: 380px) and (orientation: portrait) {
+    @media (pointer: coarse) {
+    .responsive-div {
+      width: 355px;
+      height: 250px;
+      }
+      .video{
+        padding: 0px;
+      }
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    .video h2{
+      font-size : 100%;
+    }
+    .mini h4 {
+      font-size : 0.8em;
+    }
+    .mini p{
+      font-size : 70%;
+    }
+
+        .video p{
+        font-size : 0.7em;
+        margin : 0;
+
+      }
+      .mini p {
+        margin-top : 0px;
+      }
+
+
+    }
+  }
+
+   /*---------------     IPHONE XR ----------------*/
+
+    /* Extra Small Screens (iPhone XR Landscape) */
+    @media (min-width: 845px) and (max-width: 896px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 400px;
+        height: 270px;
+      }
+      .video h2{
+      font-size : 100%;
+    }
+    .mini h4 {
+      font-size : 0.8em;
+    }
+    .mini p{
+      font-size : 70%;
+    }
+    .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    }
+  }
+    /* Extra Small Screens (iPhone XR portrait) - Pixel 7 */
+      @media (min-width: 413px) and (max-width: 414px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 390px;
+        height: 290px;
+      }
+      .video{
+        padding: 0px;
+      }
+      .video h2{
+      font-size : 100%;
+    }
+    .mini h4 {
+      font-size : 0.8em;
+    }
+    .mini p{
+      font-size : 70%;
+    }
+    }
+  }
+
+
+   /*---------------     IPHONE 12 Pro  ----------------*/
+
+   /* Extra Small Screens (iPhone 12 Pro Portrait) */
+   @media (min-width: 390px) and (max-width: 396px) and (orientation: portrait) {
+    @media (pointer: coarse) {
+    .responsive-div {
+      width: 365px;
+      height: 250px;
+      }
+      .video h2{
+      font-size : 110%;
+    }
+    .mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }
+    }
+  }
+
+  /* Extra Small Screens (iPhone 12 Pro Landscape) */
+      @media (min-width: 830px) and (max-width: 844px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 370px;
+        height: 260px;
+      }
+      .video h2{
+      font-size : 120%;
+    }
+    .mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }
+    
+    .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+
+    
+    }
+  }
+
+/*---------------     IPHONE 14 Pro Max ----------------*/
+
+  /* Extra Small Screens (Ipad 14 Pro Max portrait - Pixel 7) - Pixel 9*/
+  @media (min-width: 920px) and (max-width: 935px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 420px;
+        height: 300px;
+      }
+      .video h2{
+      font-size : 130%;
+    }
+    .video p{
+      font-size : 0.9em;
+    }
+    .mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }
+
+    .channel-bio .button {
+        padding: 0;
+    }
+    .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    }
+  }
+
+    /* Extra Small Screens (iPhone 14 Pro portrait) */
+    @media (min-width: 430px) and (max-width: 512px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 400px;
+        height: 290px;
+      }
+      .video h2{
+      font-size : 130%;
+    }
+    .mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }
+    .video p{
+      font-size : 0.9em;
+    }
+
+    .channel-bio .button {
+        margin-top: 0;
+        padding: 0;
+    }
+    
+    }
+  }
+
+/*---------------     SAMSUNG GALAXY S8 PORTRAIT ----------------*/
+
+    /* Extra Small Screens (Samsung Galaxy S8 portrait) */
+    @media  (min-width: 360px) and (max-width: 374px) and (orientation: portrait) {
+    /* Στυλ για iPhone SE (2nd & 3rd Gen) σε landscape */
+    @media (pointer: coarse) {
+    .responsive-div {
+      width: 343px;
+      height: 260px;
+      }
+      .video{
+        padding: 0px;
+      }
+      .video h2{
+      font-size : 120%;
+    }
+    .mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }
+    .video p{
+      font-size : 0.8em;
+    }
+
+    .channel-bio .button {
+        margin-top: 0;
+        padding: 0;
+    }
+    }
+  }
+
+
+
+    /* Extra Small Screens (Samsung Galaxy S8  */
+    @media (min-width: 721px) and (max-width: 740px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 330px;
+        height: 240px;
+      }
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+
+      .video h2{
+      font-size : 120%;
+    }
+    .mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }
+    .video p{
+      font-size : 0.8em;
+    }
+    .row p {
+      line-height : 12px
+    }
+    .channel-bio .button {
+
+        padding: 0;
+    }
+    .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+      
+    }
+  }
+
+/*---------------     SAMSUNG GALAXY S20 ULTRA AND A51/71 ----------------*/
+
+/* Extra Small Screens (Samsung Galaxy S20 Ultra portrait) - Pixel 7 */
+@media (min-width: 412px) and (max-width: 413px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 390px;
+        height: 290px;
+      }
+      .video{
+        padding: 0px;
+      }
+      .video{
+        padding: 0px;
+      }
+      .video h2{
+      font-size : 130%;
+    }
+    .mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }
+    .video p{
+      font-size : 0.8em;
+    }
+    .channel-bio .button {
+        margin-top: 0;
+        padding: 6px;
+        
+    }
+    .maskhead i {
+      font-size: 5.33vh;
+      }
+    .mask i {
+            font-size: 5.33vh;
+      }
+    }
+  }
+
+  /* Extra Small Screens (Samsung Galaxy S20 Ultra portrait - Pixel 7) - Pixel 9*/
+  @media (min-width: 912px) and (max-width: 915px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 420px;
+        height: 300px;
+      }
+      .video h2{
+      font-size : 120%;
+    }
+    .mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }
+    .video p{
+      font-size : 0.8em;
+    }
+
+    .channel-bio .button {
+        padding: 0;
+    }
+    .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    }
+  }
+
+  /*---------------     IPAD MINI ----------------*/
+
+      /* Extra Small Screens (iPad Mini portrait) */
+      @media (min-width: 721px) and (max-width: 768px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+        .mini{
+        flex: 0 0 50%;
+        }
+      .responsive-div {
+        width: 350px;
+        height: 290px;
+      }
+      .video{
+        padding: 0px;
+      }
+      .video h2{
+      font-size : 120%;
+    }
+    .mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }
+    .video p{
+      font-size : 0.8em;
+    }
+    .row p {
+      line-height : 12px
+    }
+    .channel-bio .button {
+        margin-top: 0;
+        padding: 0;
+    }
+    .maskhead i {
+      font-size: 5.33vh;
+      }
+    .mask i {
+          font-size: 5.33vh;
+      }
+      .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 1.66vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 1.66vh;
+    }
+    }
+  }
+  
+    /* Extra Small Screens (Ipad mini landscape) - Pixel 9*/
+    @media (min-width: 936px) and (max-width: 1024px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 470px;
+        height: 340px;
+      }
+      .video h2{
+      font-size : 120%;
+    }
+    .mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }
+    .video p{
+      font-size : 0.8em;
+    }
+    .channel-bio .button {
+        padding: 0;
+    }
+    .maskhead i {
+      font-size: 5.33vh;
+      }
+    .mask i {
+          font-size: 5.33vh;
+      }
+    .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 1.66vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 1.66vh;
+    }
+  }
+}
+
+    /*---------------     IPAD AIR ----------------*/
+
+
+ /* Extra Small Screens (Ipad Air landscape) - Pixel 9*/
+ @media (min-width: 749px) and (max-width: 787px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 360px;
+        height: 250px;
+      }
+
+      .video h2{
+      font-size : 100%;
+    }
+
+    .mini h4 {
+      font-size : 0.7em;
+      margin-top: 0px;
+    }
+    .mini p{
+      font-size : 60%;
+    }
+    .video p{
+      font-size : 0.8em;
+    }
+    .line-video h4{
+      font-size: 0.9em
+    }
+    .line-video p{
+      font-size: 70%
+    }
+    .channel-bio br{
+      font-size: 0px;
+    }
+    .maskhead i {
+      font-size: 5.33vh;
+      }
+    .mask i {
+            font-size: 5.33vh;
+      }
+    }
+  }
+
+  /* Extra Small Screens (iPad Air portrait) */
+  @media (min-width: 546px) and (max-width: 547px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 510px;
+        height: 320px;
+      }
+      .video{
+        padding: 0px;
+      }
+      .video h2{
+      font-size : 130%;
+    }
+    .mini {
+        flex: 0 0 50%; /* Full width per image */
+    }
+    .mini h4 {
+      font-size : 0.8em;
+    }
+    .mini p{
+      font-size : 80%;
+      
+    }
+    .video p{
+      font-size : 0.8em;
+    }
+    .line-video h4{
+      font-size: 0.7em
+    }
+    
+    .line-video p{
+      font-size: 70%;
+     
+    }
+    .maskhead i {
+      font-size: 8.33vh;
+      }
+    .mask i {
+            font-size: 8.33vh;
+      }
+    }
+  }
+
+    /*---------------     IPAD PRO ----------------*/
+
+  /* Extra Small Screens (iPhone 14 Max) - Pixel 7*/
+  @media (min-width: 897px) and (max-width: 913px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 400px;
+        height: 340px;
+      } 
+      .video h2{
+      font-size : 120%;
+    }
+    .mini h4 {
+      font-size : 0.8em;
+    }
+    .mini p{
+      font-size : 80%;
+    }
+    .video p{
+      font-size : 0.9em;
+    }
+    .maskhead i {
+      font-size: 5.33vh;
+      }
+    .mask i {
+            font-size: 5.33vh;
+      }
+      
+    }
+   
+  }
+
+    /* Extra Small Screens (iPad Pro portrait) */
+    @media (min-width: 570px) and (max-width: 683px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 300px;
+        height: 290px;
+      }
+      .mini {
+        flex: 0 0 50%; /* Full width per image */
+    }
+
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .video h2{
+      font-size : 120%;
+    }
+    .mini h4 {
+      font-size : 0.8em;
+    }
+    .mini p{
+      font-size : 80%;
+    }
+    .video p{
+      font-size : 0.9em;
+    }
+    .channel-bio p{
+      line-height: 13px;
+    }
+    .line-video h4{
+      font-size : 1.4em;
+    }
+    .maskhead i {
+      font-size: 3.33vh;
+      }
+    .mask i {
+            font-size: 3.33vh;
+      }
+      .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 1.33vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 1.33vh;
+    }
+      
+    }
+  }
+
+      /*---------------     SURFACE PRO 7 ----------------*/
+
+  /* Extra Small Screens (Surface Pro 7 portrait) */
+  @media (min-width: 812px) and (max-width: 920px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 420px;
+        height: 280px;
+      }
+      .mini h4 {
+        font-size: 13px;
+      }
+      .channel-bio p{
+      line-height: 12px;
+    }
+    .mini {
+        flex: 0 0 50%; /* Full width per image */
+    }
+    .maskhead i {
+      font-size: 3.33vh;
+      }
+    .mask i {
+            font-size: 3.33vh;
+      }
+    }
+    .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 1.33vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 1.33vh;
+    }
+  }
+
+  /* Extra Small Screens (Surface Pro 7 landscape) - Pixel 9*/
+  @media (min-width: 1367px) and (max-width: 1368px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 620px;
+        height: 490px;
+      }
+      .maskhead i {
+      font-size: 5.33vh;
+      }
+    .mask i {
+            font-size: 5.33vh;
+      }
+    }
+    }
+  
+
+
+  
+      /*---------------     SURFACE DUO ----------------*/
+
+
+  /* Extra Small Screens (iPad Air portrait) */
+  @media (min-width: 540px) and (max-width: 545px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 510px;
+        height: 320px;
+      }
+      .mini h4 {
+        font-size: 12px;
+      }
+      .maskhead i {
+      font-size: 5.33vh;
+      }
+      .mask i {
+              font-size: 5.33vh;
+        }
+    }
+      
+      
+    }
+  
+
+ /* Extra Small Screens (Surface Pro 7 landscape) - Pixel 9*/
+ @media (min-width: 1110px) and (max-width: 1114px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 520px;
+        height: 490px;
+      }
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .maskhead i {
+      font-size: 5.33vh;
+      }
+      .mask i {
+              font-size: 5.33vh;
+        }
+      
+    }
+  }
+
+   /* Extra Small Screens (Surface Duo  */
+ @media (min-width: 668px) and (max-width: 720px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 320px;
+        height: 240px;
+      }
+      .mini{
+        flex: 0 0 50%;
+      }
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .maskhead i {
+      font-size: 5.33vh;
+      }
+      .mask i {
+              font-size: 5.33vh;
+        }
+      
+    }
+  }
+
+
+  @media (min-width: 685px) and (max-width: 720px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 680px;
+        height: 480px;
+      }
+      .mini {
+        flex: 0 0 50%; /* Full width per image */
+    }
+      .mini h4 {
+        font-size: 12px;
+      }
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .channel-bio p{
+      line-height: 14px;
+    }
+    .maskhead i {
+      font-size: 3.33vh;
+      }
+      .mask i {
+              font-size: 3.33vh;
+        }
+      
+    }
+  }
+
+
+        /*---------------     GALAXY Z FOLD ----------------*/
+
+     /* Extra Small Screens Galaxy Z  Portrait) */
+     @media (min-width: 340px) and (max-width: 359px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 320px;
+        height: 250px;
+        }
+        .video{
+          padding: 0px;
+        }
+        .video h2{
+          font-size : 120%;
+        }
+        .mini h4 {
+          font-size : 0.9em;
+        }
+        .mini p{
+          font-size : 80%;
+        }
+        .video p{
+          font-size : 0.9em;
+        }
+        .maskhead i {
+          font-size: 5.33vh;
+          }
+          .mask i {
+             font-size: 5.33vh;
+        }
+      }
+    }
+
+      /* Extra Small Screens Galaxy Z  landscape) */
+    @media (min-width: 852px) and (max-width: 882px) and (orientation: landscape) {
+          @media (pointer: coarse) {
+          .responsive-div {
+            width: 400px;
+            height: 340px;
+          }
+          .video h2{
+            font-size : 120%;
+          }
+          .mini h4 {
+            font-size : 0.7em;
+          }
+          .mini p{
+            font-size : 60%;
+          }
+          .video p{
+            font-size : 0.9em;
+          }
+          .maskhead i {
+            font-size: 10.33vh;
+            }
+            .mask i {
+                    font-size: 10.33vh;
+              }
+              .mini .duration {
+              padding: 0.33vh 0.33vh;
+              font-size: 3.33vh;
+            }
+            .line-video .duration{
+              padding: 0.33vh 0.33vh;
+              font-size: 3.33vh;
+            }
+        }
+      }
+
+
+       /*---------------     ASUS FOLD ----------------*/
+
+        /* Asus Zenbook Fold portrait */
+        @media (min-width: 548px) and (max-width: 569px) and (orientation: portrait) {
+          @media (pointer: coarse) {
+              .responsive-div {
+                width: 530px;
+                height: 300px;
+              }
+              .video h2{
+                font-size : 120%;
+              }
+              .mini h4 {
+                font-size : 0.9em;
+              }
+              .mini p{
+                font-size : 90%;
+              }
+              .video p{
+                font-size : 0.9em;
+              }
+              .maskhead i {
+                  font-size: 5.33vh;
+                }
+                .mask i {
+                  font-size: 5.33vh;
+                  }
+            }
+        }
+        /* Asus Zenbook Fold landscape */
+        @media (min-width: 850px) and (max-width: 854px) and (orientation: landscape) {
+                @media (pointer: coarse) {
+                .responsive-div {
+                  width: 380px;
+                  height: 300px;
+                }
+                .video h2{
+                    font-size : 110%;
+                  }
+                  .mini h4 {
+                    font-size : 0.7em;
+                  }
+                  .mini p{
+                    font-size : 70%;
+                  }
+                  .video p{
+                    font-size : 0.7em;
+                  }
+                  .maskhead i {
+                  font-size: 5.33vh;
+                }
+                .mask i {
+                  font-size: 5.33vh;
+                  }
+                  .mini .duration {
+                    padding: 0.33vh 0.33vh;
+                    font-size: 1.66vh;
+                  }
+                  .line-video .duration{
+                    padding: 0.33vh 0.33vh;
+                    font-size: 1.66vh;
+                  }
+              }
+            }
+            
+
+
+         /*---------------     NEST HUB MAX ----------------*/
+
+              /* Next Hub Max*/
+            @media (min-width: 1200px) and (max-width: 1280px) and (orientation: landscape) {
+                @media (pointer: coarse) {
+                .responsive-div {
+                  width: 600px;
+                  height: 490px;
+                }
+                .video h2{
+                  font-size : 120%;
+                }
+                .mini h4 {
+                  font-size : 0.9em;
+                }
+                .mini p{
+                  font-size : 80%;
+                }
+                .video p{
+                  font-size : 0.9em;
+                }
+                .maskhead i {
+                  font-size: 5.33vh;
+                }
+                .mask i {
+                  font-size: 5.33vh;
+                  }
+                  .mini .duration {
+                    padding: 0.33vh 0.33vh;
+                    font-size: 1.66vh;
+                  }
+                  .line-video .duration{
+                    padding: 0.33vh 0.33vh;
+                    font-size: 1.66vh;
+                  }
+              }
+            }
+
+  .imageview{
+        width: 100%;
+        height: 100%;
+      }
+
+      .responsive-div {
+      width: 100%;
+      height: calc(20vw + 200px);
+      }
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+
+
+/* Desktop CSS */
+
+
+ @media  (min-width: 330px) and (max-width: 645px) {
+    /* Στυλ για iPhone SE (2nd & 3rd Gen) σε landscape */
+    @media (pointer: fine) {
+     
+      .single-channel {
+        flex-direction: column;
+      }
+    .responsive-div {
+      width: 100%;
+      height: calc(20vw + 150px);
+      }
+      .container-fluid{
+        width: 100%;
+      }
+      .d-flex {
+        display: block !important; 
+        }
+      .main-videos{
+        width: 100%;
+      }
+      .mini {
+        flex: 0 0 100%; /* Full width per image */
+    }
+      .col-md-3 {
+        flex: 1 1 100%;
+        width: 100%;
+      }
+      .video h2{
+        font-size : 90%;
+      }
+      .mini h4 {
+        font-size : 0.8em;
+        margin-top: 4px;
+      }
+      .mini p{
+        font-size : 70%;
+        margin-top: 0px;
+        margin-bottom: 6px;
+        line-height: 12px;
+      }
+      .video p{
+        font-size : 0.8em;
+      }
+      .main-videos{
+        width: 100%;
+      }
+      .mini {
+        flex: 0 0 100%; /* Full width per image */
+      }
+      .mini{
+        width: 100%!important;
+      }
+      .mini .area {
+        max-width: revert;
+      }
+      .line-video h4{
+        font-size: calc(0.75rem + .3vw); 
+      }
+      .line-video p {
+        font-size: calc(0.55rem + .3vw); 
+        line-height: 12px;
+      }
+      .line-video a{
+        font-size: calc(0.55rem + .3vw); 
+      }
+      .line-video .views{
+        font-size: calc(0.45rem + .3vw); 
+      }
+      .logorow{
+        height: 100%;
+      }
+      .mini .duration {
+        padding: 0.66vh 0.66vh;
+        font-size: 3.66vh;
+      }
+      .line-video .duration{
+        padding: 0.33vh 0.33vh;
+        font-size: 2.2vh;
+      }
+     
+    }
+  }
+
+  @media  (min-width: 330px) and (max-width: 576px) {
+    /* Στυλ για iPhone SE (2nd & 3rd Gen) σε landscape */
+    @media (pointer: fine) {
+
+      .line-video .duration{
+        padding: 0.66vh 0.66vh;
+        font-size: 3.66vh;
+      }
+      
+    }
+  }
+
+
+
+
+  @media  (min-width: 575px) and (max-width: 665px) {
+    /* Στυλ για iPhone SE (2nd & 3rd Gen) σε landscape */
+    @media (pointer: fine) {
+      .line-video h4 {
+        font-size: 0.85em;
+      }
+      .single-channel p{
+        font-size: 0.55em;
+        line-height: 12px;
+      }
+      .mini p{
+        line-height: 12px;
+      }
+
+    }
+  }
+  @media  (min-width: 645px) and (max-width: 665px) {
+    /* Στυλ για iPhone SE (2nd & 3rd Gen) σε landscape */
+    @media (pointer: fine) {
+      .responsive-div {
+        width: 620px;
+        height: calc(20vw + 283px);
+      }
+      .container-fluid{
+        width: 100%;
+      }
+      /*
+      .d-flex {
+        display: block !important; 
+        }
+      .flex-wrap{
+        display: block !important; 
+      }
+        */
+        .main-videos{
+        width: 100%;
+      }
+
+      .main-videos{
+        width: 100%;
+      }
+      .video {
+        flex: 0 0 100%; /* Full width per image */
+      }
+      .mini {
+        flex: 0 0 50%; /* Full width per image */
+      }
+      ul {
+            flex: 0 0 100%;
+        }
+        .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .video h2{
+      font-size : 120%;
+    }
+    .mini h4 {
+      font-size : 0.7em;
+    }
+    .mini p{
+      font-size : 60%;
+      margin-bottom: 10px;
+    }
+    .video p{
+      font-size : 0.9em;
+    }
+    }
+    
+  }
+
+  @media  (min-width: 665px) and (max-width: 750px) {
+    /* Στυλ για iPhone SE (2nd & 3rd Gen) σε landscape */
+    @media (pointer: fine) {
+      .mini {
+        flex: 0 0 50%;
+      }
+      .mini h4{
+        font-size: 0.6em;
+      }
+    }
+  }
+
+  @media  (min-width: 666) and (max-width: 3000px) { 
+    /* Στυλ για iPhone SE (2nd & 3rd Gen) σε landscape */
+    @media (pointer: fine) {
+    .responsive-div {
+      width: 100%;
+      height: calc(20vw + 200px);
+      }
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .video h2{
+      font-size : 90%;
+    }
+    .mini h4 {
+      font-size : 0.7em;
+      margin-top: 9px;
+    }
+    .mini p{
+      font-size : 60%;
+      line-height: 12px;
+    }
+    .video p{
+      font-size : 0.7em;
+    }
+    .line-video h4{
+      font-size: 0.9em;
+    }
+    .line-video p{
+      line-height: 12px; 
+    }
+    .channel-bio p {
+      line-height: 12px;
+    }
+    .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 1.66vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 1.66vh;
+    }
+    }
+  }
+  @media (min-width: 1200px) {
+	.mini .area {
+	  max-width: 100%; 
+	}
+	.img-fluid {
+		width : 100%
+	}
+  }
+
+
+/* Large screens */
+@media (min-width: 1920px) {
+	.mini .area {
+		max-width: 100%; /* Still no max-width restriction */
+	  }
+	  .img-fluid {
+		width : 100%
+	}
+  }
+  
+  /* Extra-large screens */
+  @media (min-width: 2560px) {
+	.mini .area {
+		max-width: 100%; /* Still no max-width restriction */
+	  }
+	  .img-fluid {
+		width : 100%
+	}
+  }
+  
+  /* Ultra-wide screens */
+  @media (min-width: 10240px) {
+	.mini .area {
+		max-width: 100%; /* Still no max-width restriction */
+	  }
+	  .img-fluid {
+		width : 100%
+	}
+  }
+
+
+  </style>
+
+</head>
+<body>
+
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar">
+      <a href="#" id="menu-close" class="pull-right toggle"><img src="images/X.png"></a>
+      <ul>
+        <li class="title">Menu</li>
+        <li><a href="#"><i class="fa fa-eye"></i> What to watch</a></li>
+        <li><a href="#"><i class="fa fa-user"></i> My Channel</a></li>
+        <li><a href="#"><i class="fa fa-clock-o"></i> History</a></li>
+        <li><a href="#"><i class="fa fa-repeat"></i> Watch Later</a></li>
+      </ul>
+      <ul id="playlist">
+        <li class="title">Playlists</li>
+        <li><a href="#"><i class="fa fa-headphones"></i> Best of David Guetta <p>David Guetta</p></a></li>
+        <li><a href="#"><i class="fa fa-film"></i> Favourite Videos <p>Check your favourite videos</p></a></li>
+        <li><a href="#"><i class="fa fa-thumbs-o-up"></i> Liked Videos <p>Reach all the videos you like</p></a></li>
+      </ul>
+      <ul id="subs">
+        <li class="title">Subscriptions</li>
+        <li><a href="#"><img src="images/shoes.png"> NikeShoes</a></li>
+        <li><a href="#"><img src="images/shakira.png"> ShakiraVEVO</a></li>
+        <li><a href="#"><img src="images/nike.png"> NikeFootball</a></li>
+      </ul>
+    </ul> <!-- End Sidebar -->
+  </nav> <!-- End Sidebar-wrapper -->
+
+  <header>
+    <div class="container-fluid">
+      <div class="row logorow">
+        
+        <div class="col-md-8 col-sm-10 col-xs-10 ">
+          <a href="#"><img src="images/logoComplete_Ver_1.png" class="logo"></a>
+          </div>
+          <div class="col-md-4 col-sm-2 col-xs-2">
+          <a href="#" id="menu-toggle" class = "float-end">
+            <img class="" src="images/menu.png">
+          </a>
+        </div> <!-- End Logo & Menu-Toggle -->
+
+      <!--  <div class="col-md-5">
+          <form><input placeholder="Type to search..." type="text"></form>
+        </div> End Search-Bar -->
+
+    <!--     <div class="col-md-5">
+         <ul id="user-info">
+            <li><a href="#" class="button">Upload</a></li>
+            <li>
+              <ul class="notifications">
+                <li><i class="fa fa-envelope"></i><span>1</span></li>
+                <li><i class="fa fa-bell"></i><span>3</span></li>
+              </ul>
+            </li>
+            <li>
+              <img src="images/profile.png">
+              <div>
+                <p class="username">John Doe</p>
+                <p>9 Subscribers</p>
+                <a href="#">Log out</a>
+              </div>
+            </li>
+          </ul> End Ul -->
+    <!--     </div> End User Information -->
+
+      </div> <!-- End Row -->
+    </div> <!-- End Container-Fluid -->
+  </header> <!-- End Header -->
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Tabs 
+            <ul class="nav nav-tabs tab mb-3">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Trending</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Subscriptions</a>
+                </li>
+            </ul>-->
+
+            <hr>
+
+            <!-- Video and Images -->
+            <div class="d-flex flex-wrap main-videos">
+                <!-- Video Section -->
+                <div class="video">
+                    <div class="area position-relative">
+                       <!-- <div class="mask position-absolute w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(0, 0, 0, 0.5);">
+                            <div class="text-center text-white">
+                                <i class="fa fa-play-circle fs-1"></i>
+                                <p>Play Now</p>
+                            </div>
+                        </div>-->
+
+
+                        <div id="onframeview" class="responsive-div">
+
+                           <!-- Video / Image --> 
+
+                           <div class="area-play"  id="imageView">
+                            
+                              <!-- Responsive replacement for the image -->
+                              <div class="ratio">
+                                      
+
+                                  <div class="placeholder-img">
+
+                                   
+                                    <div id="image-new-photo-frame-display" class="image-display"> <!-- this class will manage the size and orientation of photo-->
+                                      <img id="image-photo-display" src="media/Glasses2.png" alt="Photo" />
+  
+                                  </div>  <!--image-display-->    
+                                  
+                                            <div class="image-controls"> 
+                                              
+                                                <div class="image-new-progress-bar-container">
+                                                  <input id="image-progress-bar" type="range" min="0" max="100" value="0"/>
+                                                </div>  
+
+                                                <div class="image-controls-row">
+
+                                                  <div class="image-left-controls">
+
+
+                                                    <button id="image-play-pause-btn" class="image-new-control-btn">
+                                                      <!--<i class="image-fas fa-play"></i>-->
+                                                      <svg id="image-play-icon" viewBox="0 0 24 24">
+                                                          <path d="M8 5v14l11-7z"></path>
+                                                        </svg>
+                                                        <svg id="image-pause-icon" style="display: none;" viewBox="0 0 24 24">
+                                                          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                                                        </svg>
+                                                      </button>
+                                                       <!--Next-Previous-->
+                                                      <!-- Previous -->
+                                                      <button class="image-new-control-btn" id="image-next-btn">
+                                                        <svg viewBox="0 0 24 24">
+                                                        <path d="M6 19l8.5-7L6 5v14zm9.5-14v14h2V5h-2z"></path>
+                                                        </svg>
+                                                      </button>
+          
+                                                       <!-- Next -->
+                                                        <button class="image-new-control-btn" id="image-prev-btn">
+                                                          <svg viewBox="0 0 24 24">
+                                                          <path d="M18 19L9.5 12 18 5v14zM7.5 5v14h-2V5h2z"></path>
+                                                          </svg>
+                                                      </button>
+          
+                                                      <!-- Volume -->
+                                                    <div class="image-volume-container">
+                                                      <button class="image-new-control-btn" id="image-mute">
+                                                      <svg id="image-volume-icon" viewBox="0 0 24 24">
+                                                          <path d="M3 10v4h4l5 5V5L7 10H3zm13.5 2c0-1.77-1-3.29-2.5-4.03v8.06c1.5-.73 2.5-2.25 2.5-4.03z"></path>
+                                                      </svg>
+                                                      </button>
+                                                      <div class="image-volume-slider">
+                                                      <div class="image-volume-level" id="image-volume-level"></div>
+                                                      </div>
+                                                     </div>
+
+
+
+                                                     <div class="image-duration-info">
+                                                      <span class = "time" id="image-current-time">0:00</span> / <span id="image-total-time">0:05</span>
+                                                      </div>       
+
+                                                  </div>  <!--image-left-controls-->
+
+
+
+                                                  <div class="image-right-controls">
+
+                                                     <!-- Subtitles -->
+                                                      <!-- <button class="image-new-control-btn" id="image-subtitles">
+                                                          <svg viewBox="0 0 24 24">
+                                                          <path d="M4 4h16v16H4z"></path>
+                                                          <path d="M7 9h5v2H7zM7 13h5v2H7zM14 9h3v2h-3zM14 13h3v2h-3z"></path>
+                                                          </svg>
+                                                      </button>--> 
+                                                      <!-- Settings -->
+                                                      <button class="image-new-control-btn" id="image-settings">
+                                                          <svg viewBox="0 0 24 24">
+                                                          <path d="M12 8.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"></path>
+                                                          <path d="M19.4 12a7.4 7.4 0 01-.6 2.6l1.6 2.1-1.9 1.9-2.1-1.6a7.4 7.4 0 01-2.6.6V20h-2v-1.6a7.4 7.4 0 01-2.6-.6l-2.1 1.6-1.9-1.9 1.6-2.1a7.4 7.4 0 01-.6-2.6H4v-2h1.6a7.4 7.4 0 01.6-2.6L4.6 7.3 6.5 5.4l2.1 1.6a7.4 7.4 0 012.6-.6V4h2v1.6a7.4 7.4 0 012.6.6l2.1-1.6 1.9 1.9-1.6 2.1a7.4 7.4 0 01.6 2.6H20v2h-1.6z"></path>
+                                                          </svg>
+                                                      </button>
+                                                      <!-- Fullscreen -->
+                                                      <button class="image-new-control-btn" id="image-fullscreen">
+                                                          <svg viewBox="0 0 24 24">
+                                                          <path d="M7 14H5v5h5v-2H7v-3zm0-4h2V7h3V5H7v5zm10 5h-2v3h-3v2h5v-5zm-5-5h3v2h2V5h-5v2z"></path>
+                                                          </svg>
+                                                      </button>
+
+
+                                                  </div> <!--image-right-controls-->
+
+
+
+                                                </div> <!--image-controls-row-->
+
+
+                                            </div>  <!--image-controls-->
+
+
+                                          </div>     <!--image-container-view-->     
+
+                              </div> <!--ratio-->
+                          
+
+                        </div>
+
+                          <!-- Responsive replacement for the image -->
+                          
+                              <!-- Video Player -->
+                              <div class="video-video-container"  id="videoView"> 
+                                <div class="ratio">
+
+                              <div class="placeholder-vid">
+                                <video id="video" src="/media/brandurburgGate.mp4" type="video/mp4"></video>
+                                <div class="video-controls">
+                                  <div class="video-progress-container" id="progress-container">
+                                    <div class="video-progress-bar" id="progress-bar"></div>
+                                  </div>
+                                  <div class="video-controls-row">
+                                    <div class="video-left-controls">
+                                      <button class="video-button" id="play-pause">
+                                        <svg id="play-icon" viewBox="0 0 24 24">
+                                          <path d="M8 5v14l11-7z"></path>
+                                        </svg>
+                                        <svg id="pause-icon" style="display: none;" viewBox="0 0 24 24">
+                                          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                                        </svg>
+                                      </button>
+                                      <!-- Other buttons... -->
+                                      <button class="video-button" id="previous">
+                                        <svg viewBox="0 0 24 24">
+                                          <path d="M6 19l8.5-7L6 5v14zm9.5-14v14h2V5h-2z"></path>
+                                        </svg>
+                                      </button>
+                
+                                      <button class="video-button" id="next">
+                                        <svg viewBox="0 0 24 24">
+                                          <path d="M18 19L9.5 12 18 5v14zM7.5 5v14h-2V5h2z"></path>
+                                        </svg>
+                                      </button>
+                
+                                      <div class="video-volume-container">
+                                        <button class="video-button" id="mute">
+                                          <svg id="volume-icon" viewBox="0 0 24 24">
+                                            <path d="M3 10v4h4l5 5V5L7 10H3zm13.5 2c0-1.77-1-3.29-2.5-4.03v8.06c1.5-.73 2.5-2.25 2.5-4.03z"></path>
+                                          </svg>
+                                        </button>
+                                        <div class="video-volume-slider" id="volume-slider">
+                                          <div class="video-volume-level" id="volume-level"></div>
+                                        </div>
+                                      </div>
+                
+                                      <span class="video-time" id="time">0:00 / 0:00</span>
+                                    </div>
+                                    <div class="video-right-controls">
+                                     <!--<button class="video-button" id="subtitles">
+                                        <svg viewBox="0 0 24 24">
+                                          <path d="M4 4h16v16H4z"></path>
+                                          <path d="M7 9h5v2H7zM7 13h5v2H7zM14 9h3v2h-3zM14 13h3v2h-3z"></path>
+                                        </svg>
+                                      </button>--> 
+                
+                                      <button class="video-button" id="settings">
+                                        <svg viewBox="0 0 24 24">
+                                          <path d="M12 8.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"></path>
+                                          <path d="M19.4 12a7.4 7.4 0 01-.6 2.6l1.6 2.1-1.9 1.9-2.1-1.6a7.4 7.4 0 01-2.6.6V20h-2v-1.6a7.4 7.4 0 01-2.6-.6l-2.1 1.6-1.9-1.9 1.6-2.1a7.4 7.4 0 01-.6-2.6H4v-2h1.6a7.4 7.4 0 01.6-2.6L4.6 7.3 6.5 5.4l2.1 1.6a7.4 7.4 0 012.6-.6V4h2v1.6a7.4 7.4 0 012.6.6l2.1-1.6 1.9 1.9-1.6 2.1a7.4 7.4 0 01.6 2.6H20v2h-1.6z"></path>
+                                        </svg>
+                                      </button>
+                                      <button class="video-button" id="fullscreen">
+                                        <svg viewBox="0 0 24 24">
+                                          <path d="M7 14H5v5h5v-2H7v-3zm0-4h2V7h3V5H7v5zm10 5h-2v3h-3v2h5v-5zm-5-5h3v2h2V5h-5v2z"></path>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                                </div>
+                                  </div> <!--ratio--> 
+
+
+                          </div> <!-- ratio -->
+                           
+
+                  </div> <!--Responsive Frame-->
+
+
+               
+                      <!-- <img src="images/video.png" alt="video" class="img-fluid">--> 
+                      </div>
+               
+
+                    <h2>Brandenburg Gate 2024</h2>
+                    <p>
+                        <span>9 Days Ago</span> By <a href="#">Tasos Niopas</a> - 10 123 123 Views
+                    </p>
+                
+              </div>
+
+     <!--</div>-->    
+
+                <!-- Image Grid -->
+                <ul class="d-flex flex-wrap list-unstyled covers">
+                    <!-- Individual Image Item -->
+                    <li class="mini">
+                        <div class="area">
+                          <div class="maskhead">
+
+                            <div class="vertical-align">
+                              <i class="fa fa-play-circle"></i>
+                              <p>Play Now</p>
+                            </div> <!-- End Vertical Align -->
+            
+                          </div> <!-- End Mask / Hover -->
+                            <img src="media/LonPhotoEvent2.png" alt="video">
+                            <span class="duration">4:03</span>
+                        </div>  
+                          <h4>Creative & Atmospheric Night Portraits</h4>
+                            <p>By <a href="#">London Phographic</a></p>
+                        
+                         
+                    </li>
+                    <li class="mini">
+                        <div class="area">
+                          <div class="maskhead">
+
+                            <div class="vertical-align">
+                              <i class="fa fa-play-circle"></i>
+                              <p>Play Now</p>
+                            </div> <!-- End Vertical Align -->
+            
+                          </div> <!-- End Mask / Hover -->
+                            <img src="media/Bresson.png" alt="video">
+                            <span class="duration">12:31</span>
+                          </div>
+                            <h4>Shooting a camera is ...” </h4>
+                            <p>By <a href="#">Tasos Niopas</a></p>
+                        
+                    </li>
+                    <li class="mini">
+                        <div class="area">
+                          <div class="maskhead">
+
+                            <div class="vertical-align">
+                              <i class="fa fa-play-circle"></i>
+                              <p>Play Now</p>
+                            </div> <!-- End Vertical Align -->
+            
+                          </div> <!-- End Mask / Hover -->
+                            <img src="media/PhotographyShow.png" alt="video">
+                            <span class="duration">5:13</span>
+                           </div> 
+                            <h4>Going To</h4>
+                            <p>By <a href="#">Tasos Niopas</a></p>
+                        
+                    </li>
+                    <li class="mini">
+                        <div class="area">
+                          <div class="maskhead">
+
+                            <div class="vertical-align">
+                              <i class="fa fa-play-circle"></i>
+                              <p>Play Now</p>
+                            </div> <!-- End Vertical Align -->
+            
+                          </div> <!-- End Mask / Hover -->
+                            <img src="media/NightPortraitCollection.png" alt="video">
+                            <span class="duration">8:22</span>
+                            </div>
+                            <h4>Night Portraits : Street Photography</h4>
+                            <p>By <a href="#">London Photographic (photo: Nick Cornwall)</a></p>
+                        
+                    </li>
+                </ul>
+            </div>
+
+            </div>
+        
+      </div>
+
+    <hr>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="single-channel">
+        
+          <div class="col-md-3 channel-bio">
+  
+            <div class="channel-name"><img src="images/artwork.png"> Artwork</div>
+            <!--<br>-->
+            <p>Showcasing young artists' work is essential for their growth, creativity, and recognition. Every Post empowers emerging talent, fostering innovation and ensuring a vibrant future for the art world. </p>
+            <a href="#" class="button">More Artwork</a>
+  
+          </div><!-- End Channel-Bio -->
+  
+          <div class="col-md-3 line-video">
+              <div class="area">
+                <div class="mask">
+  
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div> <!-- End Vertical Align -->
+  
+                </div> <!-- End Mask / Hover -->
+  
+                <img src="media/alextower.jpg" alt="video" class="img-responsive">
+                <span class="duration">4:03</span>
+  
+              </div> <!-- End Area -->
+  
+              <h4>Berlin</h4>
+              <p><span>3 Days Ago</span> By <a href="#">Tasos Niopas</a></p>
+              <p class="views">429 384 Views</p>          
+          </div> <!-- End Video -->
+  
+           <div class="col-md-3 line-video">
+              <div class="area">
+                <div class="mask">
+  
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div> <!-- End Vertical Align -->
+  
+                </div> <!-- End Mask / Hover -->
+  
+  
+                <img src="media/horseStudy1.png" alt="video" class="img-responsive">
+                <span class="duration">4:03</span>
+  
+              </div> <!-- End Area -->
+  
+              <h4>Study on Horse I</h4>
+              <p><span>10 Days Ago</span> By <a href="#">Dekalion</a></p>
+              <p class="views">429 384 Views</p>          
+          </div> <!-- End Video -->
+  
+           <div class="col-md-3 line-video">
+              <div class="area">
+                <div class="mask">
+  
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div> <!-- End Vertical Align -->
+  
+                </div> <!-- End Mask / Hover -->
+  
+                <img src="media/glasses2.png" alt="video" class="img-responsive">
+                <span class="duration">4:03</span>
+  
+              </div> <!-- End Area -->
+  
+              <h4>Memoirs</h4>
+              <p><span>3 Days Ago</span> By <a href="#">Dekalion</a></p>
+              <p class="views">429 384 Views</p>          
+          </div> <!-- End Video -->
+  
+        </div> <!-- End Single Channel -->
+      </div> <!-- End Row -->
+    </div> <!-- End Container-Fluid -->
+
+
+
+    <hr>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="single-channel">
+        
+          <div class="col-md-3 channel-bio">
+  
+            <div class="channel-name"><img src="images/articles.png"> Articles</div>
+           <!--<br>--> 
+            <p>Reading about art enriches understanding and inspires creativity. It allows you to engage with artistic expression, discover new perspectives, and support a thriving cultural landscape. </p>
+            <a href="#" class="button">More ARTICLES</a>
+  
+          </div><!-- End Channel-Bio -->
+  
+          <div class="col-md-3 line-video">
+              <div class="area">
+                <div class="mask">
+  
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div> <!-- End Vertical Align -->
+  
+                </div> <!-- End Mask / Hover -->
+  
+                <img src="media/foapth.jpg" alt="video" class="img-responsive">
+                <span class="duration">4:03</span>
+  
+              </div> <!-- End Area -->
+  
+              <h4>Photographic Club of Aristotle University of Thessaloniki</h4>
+              <p><span>3 Days Ago</span> By <a href="#">Tasos Niopas</a></p>
+              <p class="views">429 384 Views</p>          
+          </div> <!-- End Video -->
+  
+           <div class="col-md-3 line-video">
+              <div class="area">
+                <div class="mask">
+  
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div> <!-- End Vertical Align -->
+  
+                </div> <!-- End Mask / Hover -->
+  
+                <img src="media/strokeArtFair.png" alt="video" class="img-responsive">
+                <span class="duration">4:03</span>
+  
+              </div> <!-- End Area -->
+  
+              <h4>Stroke Art Fair - Munich</h4>
+              <p><span>3 Days Ago</span> By <a href="#">Tasos Niopas</a></p>
+              <p class="views">429 384 Views</p>          
+          </div> <!-- End Video -->
+  
+           <div class="col-md-3 line-video">
+              <div class="area">
+                <div class="mask">
+  
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div> <!-- End Vertical Align -->
+  
+                </div> <!-- End Mask / Hover -->
+  
+                <img src="images/avant-garde.jpeg" alt="video" class="img-responsive">
+                <span class="duration">4:03</span>
+  
+              </div> <!-- End Area -->
+  
+              <h4>Russian Avant-Garde</h4>
+              <p><span>3 Days Ago</span> By <a href="#">Tasos Niopas</a></p>
+              <p class="views">429 384 Views</p>          
+          </div> <!-- End Video -->
+  
+        </div> <!-- End Single Channel -->
+      </div> <!-- End Row -->
+    </div> <!-- End Container-Fluid -->
+
+    <hr>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="single-channel">
+        
+          <div class="col-md-3 channel-bio">
+  
+            <div class="channel-name"><img src="images/logo.png">eyeOnFrame</div>
+            <!--<br>--> 
+            <p>We support artists in continuing to create, inspire people to engage with art, and enrich everyday life. Through art, we foster connection, creativity, and a more vibrant world. </p>
+            <a href="#" class="button">More eyeOnFrame</a>
+  
+          </div><!-- End Channel-Bio -->
+  
+          <div class="col-md-3 line-video">
+              <div class="area">
+                <div class="mask">
+  
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div> <!-- End Vertical Align -->
+  
+                </div> <!-- End Mask / Hover -->
+  
+                <img src="images/youngphotographer.jpg" alt="video" class="img-responsive">
+                <span class="duration">4:03</span>
+  
+              </div> <!-- End Area -->
+  
+              <h4>Vision</h4>
+              <p><span>3 Days Ago</span> By <a href="#">Tasos Niopas</a></p>
+              <p class="views">429 384 Views</p>          
+          </div> <!-- End Video -->
+  
+           <div class="col-md-3 line-video">
+              <div class="area">
+                <div class="mask">
+  
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div> <!-- End Vertical Align -->
+  
+                </div> <!-- End Mask / Hover -->
+  
+                <img src="images/features.jpg" alt="video" class="img-responsive">
+                <span class="duration">4:03</span>
+  
+              </div> <!-- End Area -->
+  
+              <h4>Features</h4>
+              <p><span>3 Days Ago</span> By <a href="#">Tasos Niopas</a></p>
+              <p class="views">429 384 Views</p>          
+          </div> <!-- End Video -->
+  
+           <div class="col-md-3 line-video">
+              <div class="area">
+                <div class="mask">
+  
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div> <!-- End Vertical Align -->
+  
+                </div> <!-- End Mask / Hover -->
+  
+                <img src="media/artcoin.png" alt="video" class="img-responsive">
+                <span class="duration">4:03</span>
+  
+              </div> <!-- End Area -->
+  
+              <h4>Artcoin</h4>
+              <p><span>3 Days Ago</span> By <a href="#">Tasos Niopas</a></p>
+              <p class="views">429 384 Views</p>          
+          </div> <!-- End Video -->
+  
+        </div> <!-- End Single Channel -->
+      </div> <!-- End Row -->
+    </div> <!-- End Container-Fluid -->
+  
+    <hr>
+  
+    <footer>
+      
+      <ul class="footer-ul">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Press & Blog</a></li>
+        <li><a href="#">Copyrights</a></li>
+        <li><a href="#">Creators & Partners</a></li>
+        <li><a href="#">Advertising</a></li>
+        <li><a href="#">Developers</a></li>
+      </ul>
+  
+      <ul class="footer-ul">
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Policy & Safety</a></li>
+        <li><a href="#">Send Feedback</a></li>
+        <li><a href="#">Try Something New</a></li>
+      </ul>
+  
+      <h4>Copyright &copy; 2024 EyeOnFrame Inc.</h4>
+  
+    </footer> <!-- End Footer -->
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/eyeOnFrameImages.js"></script>
+    <script src="js/eyeonFrameVideo.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+.area-play {
+  position: relative;
+  width: 100%;
+  /*  max-width: 1000px;Adjustable */
+  display: flex;
+  flex-direction: column; /* Stack video and controls vertically */
+  align-items: center;
+  height : 100%;
+}
+
+  .image-media-player {
+    border: 2px solid #333;
+    border-radius: 8px;
+    width: 800px;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .image-new-media-player{
+    position: relative;
+    width: 1000px;
+    max-width: 100%;
+    height: 100%;
+  }
+  
+  .image-new-photo-frame-display {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 1 / 1.78;
+  }
+
+  .image-new-progress-bar-container-old{
+    position: relative;
+    height: 8px;
+    background-color: gray;
+    cursor: pointer;
+  }
+
+  .image-new-progress-bar-container {
+    width: 100%;
+    height: 2px;
+    background: #444;;
+    position: relative;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    /*overflow: hidden;*/
+  }
+
+  .image-controls-row-old {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5px;
+    width: 100%;
+    background-color: green;
+    height: 80%;
+
+  }
+
+  .image-display {
+    width: 100%;
+    height: 80%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    vertical-align: top;
+    align-items: center;
+
+  }
+  
+  .image-display img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .image-controls-old {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.image-8);
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height:20%;
+    width:100%;
+    background-color: black;
+  }
+
+  .image-controls{
+
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    background-color: black;
+
+  }
+
+  .image-controls-row{  /* Controls row */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  white-space: nowrap;
+  overflow: hidden; /* Prevent overflow */
+}
+  
+
+/* Left and right controls */
+.image-left-controls,
+.image-right-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Add space between items */
+}
+  .image-left-controls-old{
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    height:100%;
+    width: 70%;
+    background-color: black;
+    margin-bottom: 0;
+  }
+
+  .image-right-controls-old {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height:100%;
+    width: 30%;
+  }
+  
+  .image-control-btn {
+    background: rgba(255, 255, 255, 0.image-1);
+    border: none;
+    color: white;
+    font-size: 1.image-5rem;
+    margin: 0 0px;
+    padding: 0px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.image-2s, background 0.image-2s;
+  }
+
+  .image-new-control-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+/* added */
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-new-control-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: #fff;
+  }
+
+  /* Volume slider */
+  .image-volume-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .image-volume-slider {
+    width: 80px;
+    height: 4px;
+    background: #444;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .image-volume-level {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #fff;
+    width: 50%; /* Default volume */
+  }
+
+  
+  .image-control-btn:hover {
+    background: rgba(255, 255, 255, 0.image-3);
+    color: #007bff;
+    transform: scale(1.image-2);
+  }
+  
+  .image-control-btn:focus {
+    outline: none;
+  }
+  
+  .image-progress-bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background: #222;
+
+  }
+
+  
+  #image-progress-bar {
+    width: 100%;
+    /*margin: 10px 0;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0px;
+    border: 0px;
+    height: 2px;
+  }
+  
+  .image-duration-info {
+    color: white;
+    /*font-size: 0.image-9rem;*/
+    font-size: 12px;
+  }
+
+  
+  #image-progress-bar {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 2px;
+    /*border-radius: 5px;*/
+    background: linear-gradient(to right, #0000FF 0%, #E0E0E0 0%);
+    outline: none;
+    transition: background 0.3s;
+    pointer-events: auto;
+    cursor: pointer;  /* Ensure a pointer is shown on hover */
+  }
+
+  #image-progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  
+  #image-progress-bar::-moz-range-thumb {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  
+  #image-progress-bar::-ms-thumb {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  /*
+  #image-progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  #image-progress-bar::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  #image-progress-bar::-ms-thumb {
+    width: 16px;
+    height: 16px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+    */
+
+  .ratio{
+    height : 100%;
+    z-index: 0;
+  }
+
+  .placeholder-img{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Arranges children vertically */
+    justify-content: center; /* centers horizontally */
+    align-items: center;     /* centers vertically */
+    background-color: #000;
+
+  }
+
+  @media (max-width: 768px) {
+  
+    .image-duration-info {
+      font-size: 10px;
+    }
+
+    .image-new-control-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .image-volume-slider {
+      width: 60px;
+    }
+  }

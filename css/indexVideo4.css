@@ -1,0 +1,132 @@
+/* Container for video and controls */
+.video-video-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Adjustable */
+    background-color: #000;
+    display: flex;
+    flex-direction: column; /* Stack video and controls vertically */
+    align-items: center;
+  }
+  
+  /* Video element styling */
+  video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+
+/* Video controls container */
+.video-controls {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+  }
+  
+  /* Progress bar */
+  .video-progress-container {
+    width: 100%;
+    height: 6px;
+    background: #444;
+    position: relative;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  
+  .video-progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #f00;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Controls row */
+  .video-controls-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    white-space: nowrap;
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  /* Left and right controls */
+  .video-left-controls,
+  .video-right-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Add space between items */
+  }
+  
+  /* Buttons */
+  .video-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .video-button svg {
+    width: 18px; /* Adjust icon size */
+    height: 18px;
+    fill: #fff;
+  }
+  
+  /* Volume container */
+  .video-volume-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .video-volume-slider {
+    width: 80px;
+    height: 4px;
+    background: #444;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .video-volume-level {
+    width: 50%; /* Default volume level */
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Time display */
+  .video-time {
+    font-size: 12px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .video-button svg {
+      width: 16px;
+      height: 16px;
+    }
+  
+    .video-volume-slider {
+      width: 60px;
+    }
+  
+    .video-time {
+      font-size: 10px;
+    }
+  }
+  

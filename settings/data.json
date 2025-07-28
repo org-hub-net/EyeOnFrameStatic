@@ -1,0 +1,36 @@
+[
+
+    {
+        "name" : "articlesLoad",
+        "url"   : "http://127.0.0.1:8081/api/articles/articlesPageList",
+        "action" : "POST"
+
+    },
+
+    {
+        "name" : "articlesLoadLocal",
+        "url"   : "http://127.0.0.1:8081/api/articles/articlesPageList",
+        "action" : "POST"
+
+    },
+    
+    {
+        "name" : "articlesUpdate",
+        "url"   : "settings/articlesUpd.json",
+        "action" : "GET"
+
+    },
+
+    {
+        "name" : "articlesFilter",
+        "url"   : "http://172.16.216.155:3000/api/Articles/ArticlesSet"
+
+    }
+
+
+]
+
+
+
+
+

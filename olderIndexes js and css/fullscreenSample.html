@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fullscreen Example</title>
+  <style>
+    #fullscreen-div {
+      width: 300px;
+      height: 200px;
+      background-color: #3498db;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="fullscreen-div">Click to go fullscreen</div>
+  <script>
+    const divElement = document.getElementById('fullscreen-div');
+    divElement.addEventListener('click', () => {
+      if (divElement.requestFullscreen) {
+          divElement.requestFullscreen();
+      } else if (divElement.webkitRequestFullscreen) { // Safari
+          divElement.webkitRequestFullscreen();
+      } else if (divElement.mozRequestFullScreen) { // Firefox
+          divElement.mozRequestFullScreen();
+      } else if (divElement.msRequestFullscreen) { // IE/Edge
+          divElement.msRequestFullscreen();
+      } else {
+          console.log("Fullscreen API is not supported in this browser.");
+      }
+    });
+  </script>
+</body>
+</html>

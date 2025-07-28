@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EyeOnFrame</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+
+     <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Main Styling -->
+  <link href="css/style.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+   
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+  <body>
+
+  <div class="container-fluid" id="dskCanvas">
+</div>
+
+
+<div class="container-fluid" id="mainWrapper" style="visibility: hidden;">
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar">
+      <a href="#" id="menu-close" class="pull-right toggle"><img src="images/X.png"></a>
+      <ul>
+        <li class="title">Menu</li>
+        <li><a href="#"><i class="fa fa-eye"></i> What to watch</a></li>
+        <li><a href="#"><i class="fa fa-user"></i> My Channel</a></li>
+        <li><a href="#"><i class="fa fa-clock-o"></i> History</a></li>
+        <li><a href="#"><i class="fa fa-repeat"></i> Watch Later</a></li>
+      </ul>
+      <ul id="playlist">
+        <li class="title">Playlists</li>
+        <li><a href="#"><i class="fa fa-headphones"></i> Best of David Guetta <p>David Guetta</p></a></li>
+        <li><a href="#"><i class="fa fa-film"></i> Favourite Videos <p>Check your favourite videos</p></a></li>
+        <li><a href="#"><i class="fa fa-thumbs-o-up"></i> Liked Videos <p>Reach all the videos you like</p></a></li>
+      </ul>
+      <ul id="subs">
+        <li class="title">Subscriptions</li>
+        <li><a href="#"><img src="images/shoes.png"> NikeShoes</a></li>
+        <li><a href="#"><img src="images/shakira.png"> ShakiraVEVO</a></li>
+        <li><a href="#"><img src="images/nike.png"> NikeFootball</a></li>
+      </ul>
+    </ul> <!-- End Sidebar -->
+  </nav> <!-- End Sidebar-wrapper -->
+
+  <header>
+    <div class="container-fluid" style="background-color:  #212121;">
+      
+        <div class="position-relative text-center d-flex align-items-center justify-content-center" style="min-height: 100px; width: 100%;">
+
+
+          <!-- ✅ Menu icon aligned bottom-right -->
+          <a href="#" id="menu-toggle" 
+             class="d-block position-absolute" 
+             style="bottom: 0.5rem; right: 1rem; z-index: 10;">
+            <img src="images/menu.png" 
+                 alt="Menu" 
+                 class="img-fluid" 
+                 style="max-width: 32px; height: auto;">
+          </a>
+        
+          <!-- ✅ Centered logo -->
+          <a href="#">
+            <img src="images/Logo3TemplateEyeblackmed.png" 
+                 alt="Logo" 
+                 class="logo img-fluid">
+          </a>
+        
+        </div>
+        
+
+   <!--    </div> End Row -->
+    </div> <!-- End Container-Fluid -->
+  </header> <!-- End Header -->
+
+
+
+    <div class="container-fluid"  >
+        <div class="row">
+            <!-- Tabs 
+            <ul class="nav nav-tabs tab mb-3">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Trending</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Subscriptions</a>
+                </li>
+            </ul>-->
+
+            <hr>
+
+            <!-- Video and Images -->
+            <div class="d-flex flex-wrap main-videos">
+                <!-- Video Section -->
+                <div class="video">
+                    <div class="area position-relative">
+                       <!-- <div class="mask position-absolute w-100 h-100 d-flex align-items-center justify-content-center" style="background: rgba(0, 0, 0, 0.5);">
+                            <div class="text-center text-white">
+                                <i class="fa fa-play-circle fs-1"></i>
+                                <p>Play Now</p>
+                            </div>
+                        </div>-->
+
+
+                        <div id="onframeview" class="responsive-div">
+
+                           <!-- Video / Image --> 
+
+                           <div class="area-play"  id="imageView">
+                            
+                              <!-- Responsive replacement for the image -->
+                              <div class="ratio">
+                                      
+
+                                  <div class="placeholder-img">
+
+                                   
+                                    <div id="image-new-photo-frame-display" class="image-display"> <!-- this class will manage the size and orientation of photo-->
+                                      <img id="image-photo-display" src="media/Glasses2.png" alt="Photo" />
+  
+                                  </div>  <!--image-display-->    
+                                  
+                                            <div class="image-controls"> 
+                                              
+                                                <div class="image-new-progress-bar-container">
+                                                  <input id="image-progress-bar" type="range" min="0" max="100" value="0"/>
+                                                </div>  
+
+                                                <div class="image-controls-row">
+
+                                                  <div class="image-left-controls">
+
+
+                                                    <button id="image-play-pause-btn" class="image-new-control-btn">
+                                                      <!--<i class="image-fas fa-play"></i>-->
+                                                      <svg id="image-play-icon" viewBox="0 0 24 24">
+                                                          <path d="M8 5v14l11-7z"></path>
+                                                        </svg>
+                                                        <svg id="image-pause-icon" style="display: none;" viewBox="0 0 24 24">
+                                                          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                                                        </svg>
+                                                      </button>
+                                                       <!--Next-Previous-->
+                                                      <!-- Previous -->
+                                                      <button class="image-new-control-btn" id="image-next-btn">
+                                                        <svg viewBox="0 0 24 24">
+                                                        <path d="M6 19l8.5-7L6 5v14zm9.5-14v14h2V5h-2z"></path>
+                                                        </svg>
+                                                      </button>
+          
+                                                       <!-- Next -->
+                                                        <button class="image-new-control-btn" id="image-prev-btn">
+                                                          <svg viewBox="0 0 24 24">
+                                                          <path d="M18 19L9.5 12 18 5v14zM7.5 5v14h-2V5h2z"></path>
+                                                          </svg>
+                                                      </button>
+          
+                                                      <!-- Volume -->
+                                                    <div class="image-volume-container">
+                                                      <button class="image-new-control-btn" id="image-mute">
+                                                      <svg id="image-volume-icon" viewBox="0 0 24 24">
+                                                          <path d="M3 10v4h4l5 5V5L7 10H3zm13.5 2c0-1.77-1-3.29-2.5-4.03v8.06c1.5-.73 2.5-2.25 2.5-4.03z"></path>
+                                                      </svg>
+                                                      </button>
+                                                      <div class="image-volume-slider">
+                                                      <div class="image-volume-level" id="image-volume-level"></div>
+                                                      </div>
+                                                     </div>
+
+
+                                                     <div class="image-duration-info">
+                                                      <span class = "time" id="image-current-time">0:00</span> / <span id="image-total-time">0:05</span>
+                                                      </div>       
+
+                                                  </div>  <!--image-left-controls-->
+
+
+
+                                                  <div class="image-right-controls">
+
+                                                     <!-- Subtitles -->
+                                                      <!-- <button class="image-new-control-btn" id="image-subtitles">
+                                                          <svg viewBox="0 0 24 24">
+                                                          <path d="M4 4h16v16H4z"></path>
+                                                          <path d="M7 9h5v2H7zM7 13h5v2H7zM14 9h3v2h-3zM14 13h3v2h-3z"></path>
+                                                          </svg>
+                                                      </button>--> 
+                                                      <!-- Settings -->
+                                                      <button class="image-new-control-btn" id="image-settings">
+                                                          <svg viewBox="0 0 24 24">
+                                                          <path d="M12 8.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"></path>
+                                                          <path d="M19.4 12a7.4 7.4 0 01-.6 2.6l1.6 2.1-1.9 1.9-2.1-1.6a7.4 7.4 0 01-2.6.6V20h-2v-1.6a7.4 7.4 0 01-2.6-.6l-2.1 1.6-1.9-1.9 1.6-2.1a7.4 7.4 0 01-.6-2.6H4v-2h1.6a7.4 7.4 0 01.6-2.6L4.6 7.3 6.5 5.4l2.1 1.6a7.4 7.4 0 012.6-.6V4h2v1.6a7.4 7.4 0 012.6.6l2.1-1.6 1.9 1.9-1.6 2.1a7.4 7.4 0 01.6 2.6H20v2h-1.6z"></path>
+                                                          </svg>
+                                                      </button>
+                                                      <!-- Fullscreen -->
+                                                      <button class="image-new-control-btn" id="image-fullscreen">
+                                                          <svg viewBox="0 0 24 24">
+                                                          <path d="M7 14H5v5h5v-2H7v-3zm0-4h2V7h3V5H7v5zm10 5h-2v3h-3v2h5v-5zm-5-5h3v2h2V5h-5v2z"></path>
+                                                          </svg>
+                                                      </button>
+
+
+                                                  </div> <!--image-right-controls-->
+
+
+
+                                                </div> <!--image-controls-row-->
+
+
+                                            </div>  <!--image-controls-->
+
+
+                                          </div>     <!--image-container-view-->     
+
+                              </div> <!--ratio-->
+                          
+
+                        </div>
+
+                          <!-- Responsive replacement for the image -->
+                          
+     <!-- Video Player -->
+<div class="video-video-container" id="videoView">
+  <div class="ratio">
+    <div class="placeholder-vid">
+      <video id="video" src="/media/brandurburgGate.mp4" type="video/mp4"></video>
+      
+    
+
+     <!-- OVERLAY -->
+   <div class="overlay" id="overlay">
+        <div class="creator-panel">
+          <div class="creator-info">
+            <img src="media/foapth.jpg" alt="Creator" class="creator-photo">
+            <div>
+              <strong>Creator:</strong><br>
+              Tasos Niopas
+            </div>
+          </div>
+          <div class="links">
+            <a href="https://example.com/profile" target="_blank">
+              <i class="fas fa-user"></i> Profile
+            </a>
+            <a href="https://facebook.com/giannis" target="_blank">
+              <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="https://instagram.com/giannis" target="_blank">
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://linkedin.com/in/giannis" target="_blank">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://youtube.com/@giannis" target="_blank">
+              <i class="fab fa-youtube"></i> YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="video-controls">
+        <div class="video-progress-container" id="progress-container">
+          <div class="video-progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="video-controls-row">
+          <div class="video-left-controls">
+            <button class="video-button" id="play-pause">
+              <svg id="play-icon" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"></path>
+              </svg>
+              <svg id="pause-icon" style="display: none;" viewBox="0 0 24 24">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+              </svg>
+            </button>
+            <button class="video-button" id="previous">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 19l8.5-7L6 5v14zm9.5-14v14h2V5h-2z"></path>
+              </svg>
+            </button>
+            <button class="video-button" id="next">
+              <svg viewBox="0 0 24 24">
+                <path d="M18 19L9.5 12 18 5v14zM7.5 5v14h-2V5h2z"></path>
+              </svg>
+            </button>
+            <div class="video-volume-container">
+              <button class="video-button" id="mute">
+                <svg id="volume-icon" viewBox="0 0 24 24">
+                  <path d="M3 10v4h4l5 5V5L7 10H3zm13.5 2c0-1.77-1-3.29-2.5-4.03v8.06c1.5-.73 2.5-2.25 2.5-4.03z"></path>
+                </svg>
+              </button>
+              <div class="video-volume-slider" id="volume-slider">
+                <div class="video-volume-level" id="volume-level"></div>
+              </div>
+            </div>
+            <span class="video-time" id="time">0:00 / 0:00</span>
+           
+          </div>
+          <div class="video-right-controls">
+            <button class="video-button" id="showCreator" style="font-size: 20px; display: flex; align-items: center; justify-content: center;">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+              </svg>
+            </button>
+      <!--   <button class="video-button" id="settings">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 8.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"></path>
+                <path d="M19.4 12a7.4 7.4 0 01-.6 2.6l1.6 2.1-1.9 1.9-2.1-1.6a7.4 7.4 0 01-2.6.6V20h-2v-1.6a7.4 7.4 0 01-2.6-.6l-2.1 1.6-1.9-1.9 1.6-2.1a7.4 7.4 0 01-.6-2.6H4v-2h1.6a7.4 7.4 0 01.6-2.6L4.6 7.3 6.5 5.4l2.1 1.6a7.4 7.4 0 012.6-.6V4h2v1.6a7.4 7.4 0 012.6.6l2.1-1.6 1.9 1.9-1.6 2.1a7.4 7.4 0 01.6 2.6H20v2h-1.6z"></path>
+              </svg>
+            </button>-->   
+            <button class="video-button" id="fullscreen">
+              <svg viewBox="0 0 24 24">
+                <path d="M7 14H5v5h5v-2H7v-3zm0-4h2V7h3V5H7v5zm10 5h-2v3h-3v2h5v-5zm-5-5h3v2h2V5h-5v2z"></path>
+              </svg>
+            </button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+                  </div> <!--Responsive Frame-->
+
+
+               
+                      <!-- <img src="images/video.png" alt="video" class="img-fluid">--> 
+                      </div>
+               
+
+                    <h2 id="title">Brandenburg Gate 2024</h2> 
+                    <p>
+                        <span id="createDate">9 Days Ago</span> By <a id="creator" href="#">Tasos Niopas</a> - <span id="views">10 123 123</span> Views
+                    </p>
+                
+              </div>
+
+     <!--</div>-->    
+
+                <!-- Image Grid -->
+                <ul class="d-flex flex-wrap list-unstyled covers">
+                    <!-- Individual Image Item -->
+                    <li class="mini">
+                        <div class="area">
+                          <div class="maskhead">
+
+                            <div class="vertical-align">
+                              <i class="fa fa-play-circle"></i>
+                              <p>Play Now</p>
+                            </div> <!-- End Vertical Align -->
+            
+                          </div> <!-- End Mask / Hover -->
+                            <img src="media/LonPhotoEvent2.png" alt="video">
+                            <span class="duration">4:03</span>
+                        </div>  
+                          <h4>Creative & Atmospheric Night Portraits</h4>
+                            <p>By <a href="#">London Phographic</a></p>
+                        
+                         
+                    </li>
+                    <li class="mini">
+                        <div class="area">
+                          <div class="maskhead">
+
+                            <div class="vertical-align">
+                              <i class="fa fa-play-circle"></i>
+                              <p>Play Now</p>
+                            </div> <!-- End Vertical Align -->
+            
+                          </div> <!-- End Mask / Hover -->
+                            <img src="media/Bresson.png" alt="video">
+                            <span class="duration">12:31</span>
+                          </div>
+                            <h4>Shooting a camera is ...” </h4>
+                            <p>By <a href="#">Tasos Niopas</a></p>
+                        
+                    </li>
+                    <li class="mini">
+                        <div class="area">
+                          <div class="maskhead">
+
+                            <div class="vertical-align">
+                              <i class="fa fa-play-circle"></i>
+                              <p>Play Now</p>
+                            </div> <!-- End Vertical Align -->
+            
+                          </div> <!-- End Mask / Hover -->
+                            <img src="media/PhotographyShow.png" alt="video">
+                            <span class="duration">5:13</span>
+                           </div> 
+                            <h4>Going To</h4>
+                            <p>By <a href="#">Tasos Niopas</a></p>
+                        
+                    </li>
+                    <li class="mini">
+                        <div class="area">
+                          <div class="maskhead">
+
+                            <div class="vertical-align">
+                              <i class="fa fa-play-circle"></i>
+                              <p>Play Now</p>
+                            </div> <!-- End Vertical Align -->
+            
+                          </div> <!-- End Mask / Hover -->
+                            <img src="media/NightPortraitCollection.png" alt="video">
+                            <span class="duration">8:22</span>
+                            </div>
+                            <h4>Night Portraits : Street Photography</h4>
+                            <p>By <a href="#">London Photographic (photo: Nick Cornwall)</a></p>
+                        
+                    </li>
+                </ul>
+            </div>
+
+            </div>
+        
+      </div>
+
+    <hr>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="single-channel">
+        
+          <div class="col-md-3 channel-bio">
+  
+            <div class="channel-name"><img src="images/artwork.png"> Artwork</div>
+            <!--<br>-->
+            <p>Showcasing young artists' work is essential for their growth, creativity, and recognition. Every Post empowers emerging talent, fostering innovation and ensuring a vibrant future for the art world. </p>
+            <a href="#" class="button">More Artwork</a>
+  
+          </div><!-- End Channel-Bio -->
+  
+          <div class="col-md-3 line-video">
+              <div class="area">
+                <div class="mask">
+  
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div> <!-- End Vertical Align -->
+  
+                </div> <!-- End Mask / Hover -->
+  
+                <img src="media/alextower.jpg" alt="video" class="img-responsive">
+                <span class="duration">4:03</span>
+  
+              </div> <!-- End Area -->
+  
+              <h4>Berlin</h4>
+              <p><span>3 Days Ago</span> By <a href="#">Tasos Niopas</a></p>
+              <p class="views">429 384 Views</p>          
+          </div> <!-- End Video -->
+  
+           <div class="col-md-3 line-video">
+              <div class="area">
+                <div class="mask">
+  
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div> <!-- End Vertical Align -->
+  
+                </div> <!-- End Mask / Hover -->
+  
+  
+                <img src="media/horseStudy1.png" alt="video" class="img-responsive">
+                <span class="duration">4:03</span>
+  
+              </div> <!-- End Area -->
+  
+              <h4>Study on Horse I</h4>
+              <p><span>10 Days Ago</span> By <a href="#">Dekalion</a></p>
+              <p class="views">429 384 Views</p>          
+          </div> <!-- End Video -->
+  
+           <div class="col-md-3 line-video">
+              <div class="area">
+                <div class="mask">
+  
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div> <!-- End Vertical Align -->
+  
+                </div> <!-- End Mask / Hover -->
+  
+                <img src="media/glasses2.png" alt="video" class="img-responsive">
+                <span class="duration">4:03</span>
+  
+              </div> <!-- End Area -->
+  
+              <h4>Memoirs</h4>
+              <p><span>3 Days Ago</span> By <a href="#">Dekalion</a></p>
+              <p class="views">429 384 Views</p>          
+          </div> <!-- End Video -->
+  
+        </div> <!-- End Single Channel -->
+      </div> <!-- End Row -->
+    </div> <!-- End Container-Fluid -->
+
+
+
+    <hr>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="single-channel">
+        
+          <div class="col-md-3 channel-bio">
+  
+            <div class="channel-name"><img src="images/articles.png"> Articles</div>
+           <!--<br>--> 
+            <p>Reading about art enriches understanding and inspires creativity. It allows you to engage with artistic expression, discover new perspectives, and support a thriving cultural landscape. </p>
+            <a href="#" class="button">More ARTICLES</a>
+  
+          </div><!-- End Channel-Bio -->
+  
+          <div class="col-md-3 line-video">
+              <div class="area">
+                <div class="mask">
+  
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div> <!-- End Vertical Align -->
+  
+                </div> <!-- End Mask / Hover -->
+  
+                <img src="media/foapth.jpg" alt="video" class="img-responsive">
+                <span class="duration">4:03</span>
+  
+              </div> <!-- End Area -->
+  
+              <h4>Photographic Club of Aristotle University of Thessaloniki</h4>
+              <p><span>3 Days Ago</span> By <a href="#">Tasos Niopas</a></p>
+              <p class="views">429 384 Views</p>          
+          </div> <!-- End Video -->
+  
+           <div class="col-md-3 line-video">
+              <div class="area">
+                <div class="mask">
+  
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div> <!-- End Vertical Align -->
+  
+                </div> <!-- End Mask / Hover -->
+  
+                <img src="media/strokeArtFair.png" alt="video" class="img-responsive">
+                <span class="duration">4:03</span>
+  
+              </div> <!-- End Area -->
+  
+              <h4>Stroke Art Fair - Munich</h4>
+              <p><span>3 Days Ago</span> By <a href="#">Tasos Niopas</a></p>
+              <p class="views">429 384 Views</p>          
+          </div> <!-- End Video -->
+  
+           <div class="col-md-3 line-video">
+              <div class="area">
+                <div class="mask">
+  
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div> <!-- End Vertical Align -->
+  
+                </div> <!-- End Mask / Hover -->
+  
+                <img src="images/avant-garde.jpeg" alt="video" class="img-responsive">
+                <span class="duration">4:03</span>
+  
+              </div> <!-- End Area -->
+  
+              <h4>Russian Avant-Garde</h4>
+              <p><span>3 Days Ago</span> By <a href="#">Tasos Niopas</a></p>
+              <p class="views">429 384 Views</p>          
+          </div> <!-- End Video -->
+  
+        </div> <!-- End Single Channel -->
+      </div> <!-- End Row -->
+    </div> <!-- End Container-Fluid -->
+
+    <hr>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="single-channel">
+        
+          <div class="col-md-3 channel-bio">
+  
+            <div class="channel-name"><img src="images/logo.png">eyeOnFrame</div>
+            <!--<br>--> 
+            <p>We support artists in continuing to create, inspire people to engage with art, and enrich everyday life. Through art, we foster connection, creativity, and a more vibrant world. </p>
+            <a href="#" class="button">More eyeOnFrame</a>
+  
+          </div><!-- End Channel-Bio -->
+  
+          <div class="col-md-3 line-video">
+              <div class="area">
+                <div class="mask">
+  
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div> <!-- End Vertical Align -->
+  
+                </div> <!-- End Mask / Hover -->
+  
+                <img src="images/youngphotographer.jpg" alt="video" class="img-responsive">
+                <span class="duration">4:03</span>
+  
+              </div> <!-- End Area -->
+  
+              <h4>Vision</h4>
+              <p><span>3 Days Ago</span> By <a href="#">Tasos Niopas</a></p>
+              <p class="views">429 384 Views</p>          
+          </div> <!-- End Video -->
+  
+           <div class="col-md-3 line-video">
+              <div class="area">
+                <div class="mask">
+  
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div> <!-- End Vertical Align -->
+  
+                </div> <!-- End Mask / Hover -->
+  
+                <img src="images/features.jpg" alt="video" class="img-responsive">
+                <span class="duration">4:03</span>
+  
+              </div> <!-- End Area -->
+  
+              <h4>Features</h4>
+              <p><span>3 Days Ago</span> By <a href="#">Tasos Niopas</a></p>
+              <p class="views">429 384 Views</p>          
+          </div> <!-- End Video -->
+  
+           <div class="col-md-3 line-video">
+              <div class="area">
+                <div class="mask">
+  
+                  <div class="vertical-align">
+                    <i class="fa fa-play-circle"></i>
+                    <p>Play Now</p>
+                  </div> <!-- End Vertical Align -->
+  
+                </div> <!-- End Mask / Hover -->
+  
+                <img src="media/artcoin.png" alt="video" class="img-responsive">
+                <span class="duration">4:03</span>
+  
+              </div> <!-- End Area -->
+  
+              <h4>Artcoin</h4>
+              <p><span>3 Days Ago</span> By <a href="#">Tasos Niopas</a></p>
+              <p class="views">429 384 Views</p>          
+          </div> <!-- End Video -->
+  
+        </div> <!-- End Single Channel -->
+      </div> <!-- End Row -->
+    </div> <!-- End Container-Fluid -->
+  
+    <hr>
+  
+    <footer>
+      
+      <ul class="footer-ul">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Press & Blog</a></li>
+        <li><a href="#">Copyrights</a></li>
+        <li><a href="#">Creators & Partners</a></li>
+        <li><a href="#">Advertising</a></li>
+        <li><a href="#">Developers</a></li>
+      </ul>
+  
+      <ul class="footer-ul">
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Policy & Safety</a></li>
+        <li><a href="#">Send Feedback</a></li>
+        <li><a href="#">Try Something New</a></li>
+      </ul>
+  
+      <h4>Copyright &copy; 2024 EyeOnFrame Inc.</h4>
+  
+    </footer> <!-- End Footer -->
+
+
+    <!-- Bootstrap JS -->
+     <script src ="js/q.js" ></script>   
+    <script src="js/amLib.js"></script>
+    <script src ="js/introArea.js" ></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/eyeOnFrameImages.js"></script>
+    <script src="js/eyeonFrameVideo.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/app.js"></script>
+
+    </div>
+
+</body>
+</html>

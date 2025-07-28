@@ -1,0 +1,3045 @@
+/* MAIN MOBILE CSS */
+
+body{
+  Background-image: url("http://localhost:8080/wp-content/themes/gridme/assets/images/background.png");
+  background-position: left top;
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  Font: normal normal 10px Domine,Arial,Helvetica,sans-serif;
+  
+  }
+h4{
+  font-size: 12px;
+}
+  
+#dskCanvas {
+    width: 100vw; /* Viewport width */
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: black;
+  }
+
+.duration {
+	background-color: #080808;
+	color: #fff;
+	/*padding: 10px 30px;*/
+	text-transform: uppercase;
+	font-weight: 700;
+	/*font-size: 12px;*/
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+	
+
+/* General Styles */
+
+p {
+	line-height: 18px;
+	font-weight: 300;
+}
+
+a {
+	text-decoration: none;
+	color: #030303;
+}
+
+a:hover {
+	color: #050404;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+span {
+	color: #040303;
+}
+
+ul {
+	padding: 0;
+}
+
+hr {
+	width: 100%;
+	height: 1px;
+	background-color: #d9dcdf;
+	border: none;
+	margin: 30px 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.button {
+	background-color: #212121;
+	color: #fff;
+	padding: 17px 25px;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 8px;
+	border: 2px solid #0c0c0c;
+	float: left;
+	border-radius: 999px;
+}
+
+.button:hover {
+	background-color: #fff;
+	color: #060505;
+	border: 2px solid #030303;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.clear{
+	clear:both;
+}
+
+
+
+
+
+/* Header logos */
+
+
+header {
+	padding: 0 0 0 0;
+}
+
+/* Container centered for logo */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure it takes full height of its parent */
+  background-color:  #212121;
+}
+
+/* General Logo Styling */
+.logo {
+  max-width: 100%;
+  max-height: 80px; /* Ensure logo stays within 80px max height */
+  height: auto; /* Maintain aspect ratio */
+  width: auto; /* Allow scaling based on max-width */
+  display: block;
+  margin: 0 auto; /* Center the logo */
+}
+
+/* Adjustments for Large Screens */
+@media (min-width: 1200px) {
+  .logo {
+    max-width: 200px; /* Limit the width on large screens */
+    max-height: 120px; /* Increase max height for larger screens */
+    width: auto; /* Keep the width proportional to the height */
+  }
+}
+
+#menu-toggle {
+	position: relative;
+	top: 30%;
+	right:0;
+}
+
+#menu-toggle img {
+	width: 30px;
+	margin-right : 20px;
+
+}
+
+/* end of logos section */
+
+
+
+
+
+
+
+
+
+
+input {
+	border: 1px solid #d9dcdf;
+	color: #66747f;
+	font-size: 12px;
+	padding: 17px 25px;
+	width: 100%;
+	background: url(../images/search.png) #f7f8fa no-repeat right 35px center;
+	background-size: 3%;
+	outline: none;
+}
+
+.notifications {
+	position: absolute;
+	right: 240px;
+	top: 20px;
+}
+
+.notifications li:hover {
+	cursor: pointer;
+}
+
+.notifications i {
+	color: #bbc3ca;
+	font-size: 20px;
+}
+
+.notifications span {
+	border-radius: 50px;
+	background-color: #111010;
+	color: #fff;
+	font-weight: 700;
+	padding: 4px 9px;
+	font-size: 11px;
+	position: relative;
+	top: -12px;
+	left: -12px;
+}
+
+#user-info li {
+	display: inline-block;
+}
+
+#user-info li:nth-child(3) {
+	float: right;
+}
+
+#user-info li:nth-child(3) img {
+	float: left;
+	margin-right: 20px;
+	width: 60px;
+}
+
+#user-info li:nth-child(3) div {
+	display: inline-block;
+}
+
+#user-info li:nth-child(3) p {
+	margin: 0;
+}
+
+#user-info li:nth-child(3) a {
+	font-weight: 700;
+	color: #090808;
+}
+
+#user-info li:nth-child(3) a:hover {
+	text-decoration: none;
+}
+
+.username {
+	color: #000;
+	font-weight: 700;
+}
+
+/* Tabs */
+
+.tab {
+	text-align: center;
+	margin: -10px 0;
+}
+
+.tab li {
+	display: inline-block;
+	text-transform: uppercase;
+	color: #808791;
+	font-weight: 700;
+	font-size: 12px;
+	margin: 0 20px;
+}
+
+.tab li:hover {
+	color: #000;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.tab .active {
+	border-bottom: 3px solid #e00918;
+	padding-bottom: 20px;
+	margin-bottom: -20px;
+	color: #000;
+}
+
+/* Main Content */
+
+
+.video {
+    background-color: #f9f9f9;
+    padding: 10px;
+    /*border: 1px solid #ddd;*/
+}
+
+.video .area {
+    position: relative; /* To enable absolute positioning for the duration */
+}
+
+/* Style for the duration span */
+.video .duration {
+    font-size: 50%; /* Half the size of the original */
+    color: #333; /* Ash/Gray color */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for visibility */
+    padding: 2px 5px;
+    border-radius: 3px;
+    position: absolute;
+    right: 5px; /* Position at the right */
+    z-index: 2; /* Ensure it stays on top of the video */
+}
+
+
+
+p.views {
+	color: #343434;
+}
+
+.video p {
+	margin: 0;
+	padding: 0;
+	color: #757a80;
+	line-height: inherit;
+}
+
+
+
+/* Reduce text size by 40% */
+.video h2
+{
+	font-size: 150%; /* Scaled down to 80% of the original size */
+}
+
+/*.video p 
+.mini h4,
+.mini p {
+    font-size: 100%; /* Scaled down to 80% of the original size 
+}
+*/
+
+
+.video h4 {
+	margin-top: 15px;
+	font-weight: 400;
+}
+
+
+/*
+.mini .area {
+	width: 280px;
+	height: 280px;
+}
+
+/*
+ .area img {
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+	*/
+
+
+
+	.mini .area {
+       /* width: 320; /*Full width of the parent or a specific fixed width */
+        max-width: 400px; /* Optional: Limit the maximum width */
+        position: relative;
+        padding-top: 56.25%; /* Aspect ratio: 16/9 = 56.25% */
+        overflow: hidden;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    
+    .mini .area img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+
+
+.mini h4 {
+    margin-top: 5px;
+}
+
+.mini p {
+    margin: 0;
+}
+
+
+.mini {
+	list-style: none;
+}
+
+/*
+.mini h4 {
+	margin-top: 13px;
+	font-weight: 700;
+}*/
+
+.mini p {
+  /*
+	font-size: 12px; */
+	margin-bottom: 6px;
+}
+
+.mini i {
+	font-size: 50px;
+}
+
+.mini .duration {
+	padding: 0.33vh 0.33vh;
+	font-size: 1.66vh;
+}
+
+.line-video{
+  background-color: white;
+}
+
+.line-video .duration{
+	padding: 0.33vh 0.33vh;
+	font-size: 1.66vh;
+}
+
+
+.line-video p{
+	margin-bottom :0px;
+}
+
+.mini {
+    width: 200px; /* Set a fixed width */
+    list-style: none;
+    overflow: hidden; /* Ensures overflowing content doesn't break layout */
+    text-overflow: ellipsis; /* Adds ellipsis for overflowing text */
+    white-space: nowrap; /* Prevents text wrapping */
+    background-color: white;
+}
+.main-videos{
+  background-color: white;
+}
+
+
+@media (min-width: 375px) and (max-width: 1200px) {
+
+	.video p{
+		font-size : 0.7em;
+		margin : 0;
+
+	}
+	.mini p {
+		margin-top : 0px;
+	}
+
+	@media (orientation: landscape) {
+
+  /*		.single-channel h4 {
+			font-size : 0.8em;
+		}
+  
+		.single-channel p{
+			font-size : 0.6em;
+		}*/
+		.views {
+			margin-bottom : 0;
+		}
+    /*
+		.mini h4{
+			font-size : 0.9em;
+		}
+     
+		
+		.line-video h4 {
+			font-size : 1.2em;
+		}
+ */
+
+
+	}
+
+}
+
+/* Portrait View for iPad Mini, iPad Air, iPad Pro, Asus ZenBook Fold */
+@media (min-width: 700px) and (max-width: 1024px) {
+    /* Enforce side-by-side layout for portrait mode for iPad Mini, iPad Air, iPad Pro */
+    .main-videos {
+        flex-direction: row !important; /* Video and ul side-by-side in portrait */
+    }
+
+    .video {
+        flex: 0 0 50%; /* 50% width for the video */
+        max-width: 50%; /* Ensure video takes 50% of the width */
+    }
+
+    ul {
+        flex: 0 0 50%; /* 50% width for the ul */
+        max-width: 50%; /* Ensure ul takes 50% of the width */
+    }
+
+    .mini {
+        flex: 0 0 50%; /* Two images per row */
+    }
+
+	/* Reduce text size by 40% */
+	.video h2
+	{
+		font-size: 110%; /* Scaled down to 80% of the original size */
+	}
+
+/*	.video p 
+	.mini h4,
+	.mini p {
+		font-size: 60%; /* Scaled down to 80% of the original size 
+	}*/
+
+    /* Ensure the layout is correct in landscape mode as well */
+    @media (orientation: landscape) {
+        .main-videos {
+            flex-direction: row !important; /* Side-by-side layout */
+        }
+
+        .video {
+            flex: 0 0 50%; /* 50% width for the video */
+        }
+
+        ul {
+            flex: 0 0 50%; /* 50% width for the ul */
+        }
+
+        .mini {
+            flex: 0 0 50%; /* Two images per row */
+        }
+			/* Reduce text size by 40% */
+	.video h2
+	{
+		font-size: 110%; /* Scaled down to 80% of the original size */
+	}
+
+  /*
+		.video p 
+		.mini h4,
+		.mini p {
+			font-size: 80%; /* Scaled down to 80% of the original size */
+		}
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Old 1*/
+
+
+
+
+
+
+
+
+
+
+
+.area {
+	position: relative;
+}
+
+
+.single-channel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: -15px; /* Adjust margin to reduce the space */
+    margin-left: -15px;  /* Adjust margin to reduce the space */
+}
+
+/* Adjust columns (col-md-3) to have less space 
+.single-channel > .col-md-3 {
+    padding-left: 10px;  
+    padding-right: 10px;
+}*/
+
+
+.single-channel > .col-md-3 {
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+}
+
+/* Ensure images scale well */
+.single-channel img {
+    width: 100%;
+	height:auto;
+    border-radius: 5px;
+} 
+
+
+.line-video .area {
+	/* width: 320; /*Full width of the parent or a specific fixed width */
+	 width: 100%; /* Optional: Limit the maximum width */
+	 position: relative;
+	 padding-top: 56.25%; /* Aspect ratio: 16/9 = 56.25% */
+	 overflow: hidden;
+	 background-color: #f9f9f9;
+	 border: 1px solid #ddd;
+	 border-radius: 5px;
+ }
+ 
+ .line-video .area img {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 width: 100%;
+	 height: 100%;
+	 object-fit: cover;
+	 object-position: center;
+ }
+
+
+
+
+/* Adjust the duration span positioning */
+.video .duration {
+    font-size: 50%;
+    color: #333;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2px 5px;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    z-index: 2;
+}
+
+.channel-name img {
+	width: 10%;
+}
+
+/*
+.single-channel {
+	font-size: 0.8em;
+}
+*/
+
+/* Responsive Behavior */
+/*@media (max-width: 992px) { /* Medium screens (tablets, etc.) */
+ /*   .single-channel {
+        flex-direction: column;  Stack vertically on smaller screens */
+ /*       gap: 10px;
+    }
+
+    .col-md-3 {
+        flex: 1 1 100%; /* Take full width for each element */
+  /*  }
+}*/
+
+@media (max-width: 576px) { /* Small screens (phones) */
+    .single-channel {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .single-channel  .col-md-3 {
+        flex: 1 1 100%;
+		width: 100%;
+    
+    }
+}
+
+
+
+
+.vertical-align {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+}
+
+/* mask*/
+
+
+
+.area:hover .mask {
+	display: block;
+	cursor: pointer;
+	opacity: 70%;
+	transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+
+.mask {
+	position: absolute;
+	background-color: rgba(6, 5, 5, 0.9);
+	width: 100%;
+	height: 100%;
+	top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    right: 0; /* Align to right */
+    bottom: 0; /* Align to bottom */
+	text-align: center;
+	opacity: 0;
+	z-index: 1;
+}
+
+.mask i {
+	font-size: 8.33vh;
+  }
+
+.mask p {
+	color: #fff;
+	font-weight: 700;
+}
+
+.mask i {
+	/*font-size: 80px;*/
+	color: #fff;
+}
+
+
+
+
+
+.area:hover .maskhead {
+	display: block;
+	cursor: pointer;
+	opacity: 70%;
+	transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+.maskhead {
+	position: absolute;
+	background-color: rgba(6, 5, 5, 0.9);
+	width: 100%;
+	height: 100%;
+	top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    right: 0; /* Align to right */
+    bottom: 0; /* Align to bottom */
+	text-align: center;
+	opacity: 0;
+	z-index: 1;
+}
+
+.maskhead i {
+	font-size: 8.33vh;
+  }
+
+.maskhead p {
+	color: #fff;
+	font-weight: 700;
+}
+
+.maskhead i {
+	/*font-size: 80px;*/
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+/* Channel Information Section 
+.channel-bio {
+  background-color: white;
+}
+*/
+.channel-bio hr {
+	margin: 20px 0;
+}
+
+.channel-bio p {
+	text-align: left;
+}
+
+
+.channel-bio .button {
+	margin-top: 10px;
+	padding: 4px;
+	text-align: center;
+}
+
+.channel-bio p {
+	background-color: white;
+	color: black;
+	font-weight: 300;
+	padding: 3px;
+  }
+
+
+.channel-name {
+	font-weight: 200;
+	font-size: 16px;
+  background-color: #212121;
+  color: white;
+}
+
+.channel-name img {
+	margin-right: 10px;
+}
+
+
+
+
+
+
+/* Footer */
+
+footer {
+	text-align: center;
+	padding: 0 0 30px;
+  background-color: #212121;
+
+}
+footer ul{
+	width : 100%;
+}
+
+footer li {
+	display: inline;
+	margin: 0 15px;
+}
+
+footer ul:nth-child(1) a {
+	font-size: 16px;
+	font-weight: 600;
+	color: white;
+}
+
+footer ul:nth-child(2) {
+	margin: 20px 0;
+}
+
+footer ul:nth-child(2) a {
+	color: white;
+}
+
+footer li a:hover {
+	color: #0b0b0b;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+footer h4 {
+	color: #aaa7a7;
+	font-weight: 300;
+}
+
+/* Sidebar */
+
+.title {
+	color: #0d0c0c;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.sidebar ul {
+	margin-bottom: 5px;
+	list-style: none;
+}
+
+.sidebar li {
+	line-height: 40px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.sidebar a {
+	color: #828c95;
+	font-weight: 500;
+}
+
+.sidebar a:hover {
+	color: #060606;
+	text-decoration: none;
+}
+
+.sidebar i {
+	font-size: 20px;
+	margin-right: 15px;
+}
+
+.sidebar #subs img {
+	margin-right: 15px;
+	width: 25px;
+}
+
+#playlist p {
+	font-size: 12px;
+	font-weight: 300;
+	margin-left: 35px;
+	margin-top: -15px;
+}
+
+#playlist i {
+	float: left;
+	margin-top: 15px;
+}
+
+#sidebar-wrapper {
+	padding-top: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-bottom: -10px;
+	font-weight: 600;
+	font-size: 14px;
+	background-color: #f7f8fa;
+	border-right: 1px solid #dbdee0;
+	top: 0;
+	bottom: 0;
+	z-index: 1000;
+	left: 0;
+	position: fixed;
+	width: 300px;
+	margin-left: -300px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+#sidebar-wrapper.active {
+	left: 300px;
+	width: 300px;
+}
+
+#menu-close {
+	padding: 7px 0;
+}
+
+#menu-close img {
+	width: 10px
+}
+
+
+
+
+
+
+
+
+
+
+/*old 2*/
+
+
+
+
+
+
+
+
+
+
+/*   INDEX VIDEO CSS  */
+
+
+
+/* Container for video and controls */
+.video-video-container {
+    position: relative;
+    width: 100%;
+    /* Amax-width: 1000px; djustable */
+    background-color: #000;
+    display: flex;
+    flex-direction: column; /* Stack video and controls vertically */
+    align-items: center;
+    justify-content: center; /* centers horizontally */
+    height: 100%
+  }
+  
+  .placeholder-vid{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Arranges children vertically */
+    justify-content: center; /* centers horizontally */
+    align-items: center;     /* centers vertically */
+    background-color: #000;
+
+  }
+
+  
+  
+  /* Video element styling */
+  video {
+    
+    width: 100%;
+    height: 80%;
+    display: block;
+    object-fit: contain;
+  
+  
+  }
+  
+  
+  /* Video controls container */
+  .video-controls {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    background-color: black;
+    /*height: 20%;*/
+  }
+
+  
+  /* Progress bar */
+  .video-progress-container {
+    width: 100%;
+    height: 6px;
+    background: #444;
+    position: relative;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  
+  .video-progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #f00;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Controls row */
+  .video-controls-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    white-space: nowrap;
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  /* Left and right controls */
+  .video-left-controls,
+  .video-right-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Add space between items */
+  }
+  
+  /* Buttons */
+  .video-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .video-button svg {
+    width: 18px; /* Adjust icon size */
+    height: 18px;
+    fill: #fff;
+  }
+  
+  /* Volume container */
+  .video-volume-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .video-volume-slider {
+    width: 80px;
+    height: 4px;
+    background: #444;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .video-volume-level {
+    width: 50%; /* Default volume level */
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Time display */
+  .video-time {
+    font-size: 12px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .video-button svg {
+      width: 16px;
+      height: 16px;
+    }
+  
+    .video-volume-slider {
+      width: 60px;
+    }
+  
+    .video-time {
+      font-size: 10px;
+    }
+  }
+
+  
+
+
+
+  /* INDEX PHOTO CSS */
+
+  .area-play {
+    position: relative;
+    width: 100%;
+    /*  max-width: 1000px;Adjustable */
+    display: flex;
+    flex-direction: column; /* Stack video and controls vertically */
+    align-items: center;
+    height : 100%;
+  }
+  
+    .image-media-player {
+      border: 2px solid #333;
+      border-radius: 8px;
+      width: 800px;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+  
+    .image-new-media-player{
+      position: relative;
+      width: 1000px;
+      max-width: 100%;
+      height: 100%;
+    }
+    
+    .image-new-photo-frame-display {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 1 / 1.78;
+    }
+  
+    .image-new-progress-bar-container-old{
+      position: relative;
+      height: 8px;
+      background-color: gray;
+      cursor: pointer;
+    }
+  
+    .image-new-progress-bar-container {
+      width: 100%;
+      height: 2px;
+      background: #444;;
+      position: relative;
+      margin-bottom: 5px;
+      border-radius: 3px;
+      /*overflow: hidden;*/
+    }
+  
+    .image-controls-row-old {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 5px;
+      width: 100%;
+      background-color: green;
+      height: 80%;
+  
+    }
+  
+    .image-display {
+      width: 100%;
+      height: 80%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      vertical-align: top;
+      align-items: center;
+  
+    }
+    
+    .image-display img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    
+    .image-controls-old {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.image-8);
+      color: #fff;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      height:20%;
+      width:100%;
+      background-color: black;
+    }
+  
+    .image-controls{
+  
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      box-sizing: border-box;
+      padding: 5px 10px;
+      background-color: black;
+  
+    }
+  
+    .image-controls-row{  /* Controls row */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    white-space: nowrap;
+    overflow: hidden; /* Prevent overflow */
+  }
+    
+  
+  /* Left and right controls */
+  .image-left-controls,
+  .image-right-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Add space between items */
+  }
+    .image-left-controls-old{
+      display: flex;
+      align-items: center;
+      gap: 0px;
+      height:100%;
+      width: 70%;
+      background-color: black;
+      margin-bottom: 0;
+    }
+  
+    .image-right-controls-old {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height:100%;
+      width: 30%;
+    }
+    
+    .image-control-btn {
+      background: rgba(255, 255, 255, 0.image-1);
+      border: none;
+      color: white;
+      font-size: 1.image-5rem;
+      margin: 0 0px;
+      padding: 0px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.image-2s, background 0.image-2s;
+    }
+  
+    .image-new-control-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+  /* added */
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .image-new-control-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+    }
+  
+    /* Volume slider */
+    .image-volume-container {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  
+    .image-volume-slider {
+      width: 80px;
+      height: 4px;
+      background: #444;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .image-volume-level {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: #fff;
+      width: 50%; /* Default volume */
+    }
+  
+    
+    .image-control-btn:hover {
+      background: rgba(255, 255, 255, 0.image-3);
+      color: #007bff;
+      transform: scale(1.image-2);
+    }
+    
+    .image-control-btn:focus {
+      outline: none;
+    }
+    
+    .image-progress-bar-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      background: #222;
+  
+    }
+  
+    
+    #image-progress-bar {
+      width: 100%;
+      /*margin: 10px 0;*/
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0px;
+      border: 0px;
+      height: 2px;
+    }
+    
+    .image-duration-info {
+      color: white;
+      /*font-size: 0.image-9rem;*/
+      font-size: 12px;
+    }
+  
+    
+    #image-progress-bar {
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 2px;
+      /*border-radius: 5px;*/
+      background: linear-gradient(to right, #0000FF 0%, #E0E0E0 0%);
+      outline: none;
+      transition: background 0.3s;
+      pointer-events: auto;
+      cursor: pointer;  /* Ensure a pointer is shown on hover */
+    }
+  
+    #image-progress-bar::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    
+    #image-progress-bar::-moz-range-thumb {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    
+    #image-progress-bar::-ms-thumb {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    /*
+    #image-progress-bar::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      background-color: #ff0000;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  
+    #image-progress-bar::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      background-color: #ff0000;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  
+    #image-progress-bar::-ms-thumb {
+      width: 16px;
+      height: 16px;
+      background-color: #ff0000;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+      */
+  
+    .ratio{
+      height : 100%;
+      z-index: 0;
+    }
+  
+    .placeholder-img{
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column; /* Arranges children vertically */
+      justify-content: center; /* centers horizontally */
+      align-items: center;     /* centers vertically */
+      background-color: #000;
+  
+    }
+  
+    @media (max-width: 768px) {
+    
+      .image-duration-info {
+        font-size: 10px;
+      }
+  
+      .image-new-control-btn svg {
+        width: 16px;
+        height: 16px;
+      }
+  
+      .image-volume-slider {
+        width: 60px;
+      }
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    /* INDEX PAGE EMBEDDED CSS */
+
+
+    /* Portrait Orientation */
+@media (orientation: portrait) {
+    .main-videos {
+        flex-direction: column; /* Stack video and images in portrait */
+    }
+
+    .mini {
+        flex: 0 0 100%; /* Full width per image */
+    }
+
+    .video {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* Landscape Orientation */
+@media (orientation: landscape) {
+  .main-videos {
+      flex-direction: row; /* Side-by-side layout */
+  }
+
+  .video {
+      flex: 0 0 50%; /* 50% width for video */
+  }
+
+  ul {
+      flex: 0 0 50%; /* 50% width for ul */
+  }
+
+  .mini {
+      flex: 0 0 50%; /* Two images per row */
+  }
+
+  .footer-ul{
+    max-width: 100%;
+  }
+  /*
+  .single-channel h4 {
+    font-size : 0.8em;
+  }*/
+ /* .single-channel p{
+    font-size : 0.6em;
+  }*/
+  .views {
+    margin-bottom : 0;
+  }
+/*  .mini h4{
+    font-size : 0.9em;
+  }*/
+  /*
+  .line-video h4 {
+    font-size : 1.2em;
+  }*/
+
+
+}
+
+
+
+/* Queries for Mobile Brands */
+
+
+  /*---------------     IPHONE SE ----------------*/
+
+   /* Extra Small Screens (iPhone SE Landscape) */
+   @media  (min-width: 370px) and (max-width: 667px) and (orientation: landscape) {
+    /* Στυλ για iPhone SE (2nd & 3rd Gen) σε landscape */
+    @media (pointer: coarse) {
+    .responsive-div {
+      width: 300px;
+      height: 220px;
+      }
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .video h2{
+      font-size : 100%;
+    }
+/*    .mini h4 {
+      font-size : 0.8em;
+   
+    .mini p{
+      font-size : 70%;
+    } }*/
+    .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    .video p{
+        font-size : 0.7em;
+        margin : 0;
+
+      }
+      .mini p {
+          margin-top : 0px;
+        }
+
+    /*  .single-channel h4 {
+			font-size : 0.8em;
+		}
+     
+		.single-channel p{
+			font-size : 0.6em;
+		} */
+		.views {
+			margin-bottom : 0;
+		}
+    /*
+		.mini h4{
+			font-size : 0.9em;
+		}
+     
+		.line-video h4 {
+			font-size : 1.2em;
+		}
+ */
+		
+      
+    }
+  }
+     /* Extra Small Screens (iPhone 12 Pro Portrait) */
+     @media (min-width: 370px) and (max-width: 380px) and (orientation: portrait) {
+    @media (pointer: coarse) {
+    .responsive-div {
+      width: 355px;
+      height: 250px;
+      }
+      .video{
+        padding: 0px;
+      }
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    .video h2{
+      font-size : 100%;
+    }
+ /*   .mini h4 {
+      font-size : 0.8em;
+    }
+     
+    .mini p{
+      font-size : 70%;
+    }
+ */
+        .video p{
+        font-size : 0.7em;
+        margin : 0;
+
+      }
+      .mini p {
+        margin-top : 0px;
+      }
+
+
+    }
+  }
+
+   /*---------------     IPHONE XR ----------------*/
+
+    /* Extra Small Screens (iPhone XR Landscape) */
+    @media (min-width: 845px) and (max-width: 896px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 400px;
+        height: 270px;
+      }
+      .video h2{
+      font-size : 100%;
+    }
+ /*   .mini h4 {
+      font-size : 0.8em;
+    }
+    .mini p{
+      font-size : 70%;
+    }*/
+    .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    }
+  }
+    /* Extra Small Screens (iPhone XR portrait) - Pixel 7 */
+      @media (min-width: 413px) and (max-width: 414px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 390px;
+        height: 290px;
+      }
+      .video{
+        padding: 0px;
+      }
+      .video h2{
+      font-size : 100%;
+    }
+    /*
+    .mini h4 {
+      font-size : 0.8em;
+    }
+    .mini p{
+      font-size : 70%;
+    }*/
+    }
+  }
+
+
+   /*---------------     IPHONE 12 Pro  ----------------*/
+
+   /* Extra Small Screens (iPhone 12 Pro Portrait) */
+   @media (min-width: 390px) and (max-width: 396px) and (orientation: portrait) {
+    @media (pointer: coarse) {
+    .responsive-div {
+      width: 365px;
+      height: 250px;
+      }
+      .video h2{
+      font-size : 110%;
+    }
+  /*  .mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }*/
+    }
+  }
+
+  /* Extra Small Screens (iPhone 12 Pro Landscape) */
+      @media (min-width: 830px) and (max-width: 844px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 370px;
+        height: 260px;
+      }
+      .video h2{
+      font-size : 120%;
+    }
+   /* .mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }*/
+    
+    .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+
+    
+    }
+  }
+
+/*---------------     IPHONE 14 Pro Max ----------------*/
+
+  /* Extra Small Screens (Ipad 14 Pro Max portrait - Pixel 7) - Pixel 9*/
+  @media (min-width: 920px) and (max-width: 935px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 420px;
+        height: 300px;
+      }
+      .video h2{
+      font-size : 130%;
+    }
+    .video p{
+      font-size : 0.9em;
+    }
+/*    .mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }
+      */
+
+    .channel-bio .button {
+        padding: 0;
+    }
+    .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    }
+  }
+
+    /* Extra Small Screens (iPhone 14 Pro portrait) */
+    @media (min-width: 430px) and (max-width: 512px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 400px;
+        height: 290px;
+      }
+      .video h2{
+      font-size : 130%;
+    }
+ /*   .mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }
+      */
+    .video p{
+      font-size : 0.9em;
+    }
+
+    .channel-bio .button {
+        margin-top: 0;
+        padding: 0;
+    }
+    
+    }
+  }
+
+/*---------------     SAMSUNG GALAXY S8 PORTRAIT ----------------*/
+
+    /* Extra Small Screens (Samsung Galaxy S8 portrait) */
+    @media  (min-width: 360px) and (max-width: 374px) and (orientation: portrait) {
+    /* Στυλ για iPhone SE (2nd & 3rd Gen) σε landscape */
+    @media (pointer: coarse) {
+    .responsive-div {
+      width: 343px;
+      height: 260px;
+      }
+      .video{
+        padding: 0px;
+      }
+      .video h2{
+      font-size : 120%;
+    }
+    /*.mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }*/
+    .video p{
+      font-size : 0.8em;
+    }
+
+    .channel-bio .button {
+        margin-top: 0;
+        padding: 0;
+    }
+    }
+  }
+
+
+
+    /* Extra Small Screens (Samsung Galaxy S8  */
+    @media (min-width: 721px) and (max-width: 740px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 330px;
+        height: 240px;
+      }
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+
+      .video h2{
+      font-size : 120%;
+    }
+   
+   /* .mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }*/
+    
+    .video p{
+      font-size : 0.8em;
+    }
+    .row p {
+      line-height : 12px
+    }
+    .channel-bio .button {
+
+        padding: 0;
+    }
+    .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+      
+    }
+  }
+
+/*---------------     SAMSUNG GALAXY S20 ULTRA AND A51/71 ----------------*/
+
+/* Extra Small Screens (Samsung Galaxy S20 Ultra portrait) - Pixel 7 */
+@media (min-width: 412px) and (max-width: 413px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 390px;
+        height: 290px;
+      }
+      .video{
+        padding: 0px;
+      }
+      .video{
+        padding: 0px;
+      }
+      .video h2{
+      font-size : 130%;
+    }
+   /* .mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }*/
+    .video p{
+      font-size : 0.8em;
+    }
+    .channel-bio .button {
+        margin-top: 0;
+        padding: 6px;
+        
+    }
+    .maskhead i {
+      font-size: 5.33vh;
+      }
+    .mask i {
+            font-size: 5.33vh;
+      }
+    }
+  }
+
+  /* Extra Small Screens (Samsung Galaxy S20 Ultra portrait - Pixel 7) - Pixel 9*/
+  @media (min-width: 912px) and (max-width: 915px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 420px;
+        height: 300px;
+      }
+      .video h2{
+      font-size : 120%;
+    }
+    /*  .mini h4 {
+      font-size : 0.9em;
+    }
+  .mini p{
+      font-size : 80%;
+    }*/
+    .video p{
+      font-size : 0.8em;
+    }
+
+    .channel-bio .button {
+        padding: 0;
+    }
+    .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 2.66vh;
+    }
+    }
+  }
+
+  /*---------------     IPAD MINI ----------------*/
+
+      /* Extra Small Screens (iPad Mini portrait) */
+      @media (min-width: 721px) and (max-width: 768px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+        .mini{
+        flex: 0 0 50%;
+        }
+      .responsive-div {
+        width: 350px;
+        height: 290px;
+      }
+      .video{
+        padding: 0px;
+      }
+      .video h2{
+      font-size : 120%;
+    }
+    /*.mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }*/
+    .video p{
+      font-size : 0.8em;
+    }
+    .row p {
+      line-height : 12px
+    }
+    .channel-bio .button {
+        margin-top: 0;
+        padding: 0;
+    }
+    .maskhead i {
+      font-size: 5.33vh;
+      }
+    .mask i {
+          font-size: 5.33vh;
+      }
+      .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 1.66vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 1.66vh;
+    }
+    }
+  }
+  
+    /* Extra Small Screens (Ipad mini landscape) - Pixel 9*/
+    @media (min-width: 936px) and (max-width: 1024px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 470px;
+        height: 340px;
+      }
+      .video h2{
+      font-size : 120%;
+    }
+    /*
+    .mini h4 {
+      font-size : 0.9em;
+    }
+    .mini p{
+      font-size : 80%;
+    }*/
+    .video p{
+      font-size : 0.8em;
+    }
+    .channel-bio .button {
+        padding: 0;
+    }
+    .maskhead i {
+      font-size: 5.33vh;
+      }
+    .mask i {
+          font-size: 5.33vh;
+      }
+    .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 1.66vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 1.66vh;
+    }
+  }
+}
+
+    /*---------------     IPAD AIR ----------------*/
+
+
+ /* Extra Small Screens (Ipad Air landscape) - Pixel 9*/
+ @media (min-width: 749px) and (max-width: 787px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 360px;
+        height: 250px;
+      }
+
+      .video h2{
+      font-size : 100%;
+    }
+
+    .mini h4 {
+  /*    font-size : 0.7em;*/
+      margin-top: 0px;
+    }
+      /*
+    .mini p{
+      font-size : 60%;
+    }
+      */
+    .video p{
+      font-size : 0.8em;
+    }
+    /*
+    .line-video h4{
+      font-size: 0.9em
+    }
+    .line-video p{
+      font-size: 70%
+    }
+      */
+    .channel-bio br{
+      font-size: 0px;
+    }
+    .maskhead i {
+      font-size: 5.33vh;
+      }
+    .mask i {
+            font-size: 5.33vh;
+      }
+    }
+  }
+
+  /* Extra Small Screens (iPad Air portrait) */
+  @media (min-width: 546px) and (max-width: 547px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 510px;
+        height: 320px;
+      }
+      .video{
+        padding: 0px;
+      }
+      .video h2{
+      font-size : 130%;
+    }
+    .mini {
+        flex: 0 0 50%; /* Full width per image */
+    }
+    /*
+    .mini h4 {
+      font-size : 0.8em;
+    }
+    .mini p{
+      font-size : 80%;
+      
+    }*/
+    .video p{
+      font-size : 0.8em;
+    }
+    .line-video h4{
+      font-size: 0.7em
+    }
+    
+    .line-video p{
+      font-size: 70%;
+     
+    }
+    .maskhead i {
+      font-size: 8.33vh;
+      }
+    .mask i {
+            font-size: 8.33vh;
+      }
+    }
+  }
+
+    /*---------------     IPAD PRO ----------------*/
+
+  /* Extra Small Screens (iPhone 14 Max) - Pixel 7*/
+  @media (min-width: 897px) and (max-width: 913px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 400px;
+        height: 340px;
+      } 
+      .video h2{
+      font-size : 120%;
+    }
+ /*  .mini h4 {
+      font-size : 0.8em;
+    }
+    .mini p{
+      font-size : 80%;
+    }*/
+    .video p{
+      font-size : 0.9em;
+    }
+    .maskhead i {
+      font-size: 5.33vh;
+      }
+    .mask i {
+            font-size: 5.33vh;
+      }
+      
+    }
+   
+  }
+
+    /* Extra Small Screens (iPad Pro portrait) */
+    @media (min-width: 570px) and (max-width: 683px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 300px;
+        height: 290px;
+      }
+      .mini {
+        flex: 0 0 50%; /* Full width per image */
+    }
+
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .video h2{
+      font-size : 120%;
+    }
+    /*
+    .mini h4 {
+      font-size : 0.8em;
+    }
+    .mini p{
+      font-size : 80%;
+    }
+      */
+    .video p{
+      font-size : 0.9em;
+    }
+    .channel-bio p{
+      line-height: 13px;
+    }
+   /* .line-video h4{
+      font-size : 1.4em;
+    }*/
+    .maskhead i {
+      font-size: 3.33vh;
+      }
+    .mask i {
+            font-size: 3.33vh;
+      }
+      .mini .duration {
+      padding: 0.33vh 0.33vh;
+     /* font-size: 1.33vh;*/
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 1.33vh;
+    }
+      
+    }
+  }
+
+      /*---------------     SURFACE PRO 7 ----------------*/
+
+  /* Extra Small Screens (Surface Pro 7 portrait) */
+  @media (min-width: 812px) and (max-width: 920px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 420px;
+        height: 280px;
+      }
+      /*
+      .mini h4 {
+        font-size: 13px;
+      }
+      */
+      .channel-bio p{
+      line-height: 12px;
+    }
+    .mini {
+        flex: 0 0 50%; /* Full width per image */
+    }
+    .maskhead i {
+      font-size: 3.33vh;
+      }
+    .mask i {
+            font-size: 3.33vh;
+      }
+    }
+    .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 1.33vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 1.33vh;
+    }
+  }
+
+  /* Extra Small Screens (Surface Pro 7 landscape) - Pixel 9*/
+  @media (min-width: 1367px) and (max-width: 1368px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 620px;
+        height: 490px;
+      }
+      .maskhead i {
+      font-size: 5.33vh;
+      }
+    .mask i {
+            font-size: 5.33vh;
+      }
+    }
+    }
+  
+
+
+  
+      /*---------------     SURFACE DUO ----------------*/
+
+
+  /* Extra Small Screens (iPad Air portrait) */
+  @media (min-width: 540px) and (max-width: 545px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 510px;
+        height: 320px;
+      }
+      /*
+      .mini h4 {
+        font-size: 12px;
+      }*/
+      .maskhead i {
+      font-size: 5.33vh;
+      }
+      .mask i {
+              font-size: 5.33vh;
+        }
+    }
+      
+      
+    }
+  
+
+ /* Extra Small Screens (Surface Pro 7 landscape) - Pixel 9*/
+ @media (min-width: 1110px) and (max-width: 1114px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 520px;
+        height: 490px;
+      }
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .maskhead i {
+      font-size: 5.33vh;
+      }
+      .mask i {
+              font-size: 5.33vh;
+        }
+      
+    }
+  }
+
+   /* Extra Small Screens (Surface Duo  */
+ @media (min-width: 668px) and (max-width: 720px) and (orientation: landscape) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 320px;
+        height: 240px;
+      }
+      .mini{
+        flex: 0 0 50%;
+      }
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .maskhead i {
+      font-size: 5.33vh;
+      }
+      .mask i {
+              font-size: 5.33vh;
+        }
+      
+    }
+  }
+
+
+  @media (min-width: 685px) and (max-width: 720px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 680px;
+        height: 480px;
+      }
+      .mini {
+        flex: 0 0 50%; /* Full width per image */
+    }
+    /*  .mini h4 {
+        font-size: 12px;
+      }*/
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .channel-bio p{
+      line-height: 14px;
+    }
+    .maskhead i {
+      font-size: 3.33vh;
+      }
+      .mask i {
+              font-size: 3.33vh;
+        }
+      
+    }
+  }
+
+
+        /*---------------     GALAXY Z FOLD ----------------*/
+
+     /* Extra Small Screens Galaxy Z  Portrait) */
+     @media (min-width: 340px) and (max-width: 359px) and (orientation: portrait) {
+      @media (pointer: coarse) {
+      .responsive-div {
+        width: 320px;
+        height: 250px;
+        }
+        .video{
+          padding: 0px;
+        }
+        .video h2{
+          font-size : 120%;
+        }
+    /*    .mini h4 {
+          font-size : 0.9em;
+        }
+        .mini p{
+          font-size : 80%;
+        }*/
+        .video p{
+          font-size : 0.9em;
+        }
+        .maskhead i {
+          font-size: 5.33vh;
+          }
+          .mask i {
+             font-size: 5.33vh;
+        }
+      }
+    }
+
+      /* Extra Small Screens Galaxy Z  landscape) */
+    @media (min-width: 852px) and (max-width: 882px) and (orientation: landscape) {
+          @media (pointer: coarse) {
+          .responsive-div {
+            width: 400px;
+            height: 340px;
+          }
+          .video h2{
+            font-size : 120%;
+          }
+     /*     .mini h4 {
+            font-size : 0.7em;
+          }
+          .mini p{
+            font-size : 60%;
+          }*/
+          .video p{
+            font-size : 0.9em;
+          }
+          .maskhead i {
+            font-size: 10.33vh;
+            }
+            .mask i {
+                    font-size: 10.33vh;
+              }
+              .mini .duration {
+              padding: 0.33vh 0.33vh;
+              font-size: 3.33vh;
+            }
+            .line-video .duration{
+              padding: 0.33vh 0.33vh;
+              font-size: 3.33vh;
+            }
+        }
+      }
+
+
+       /*---------------     ASUS FOLD ----------------*/
+
+        /* Asus Zenbook Fold portrait */
+        @media (min-width: 548px) and (max-width: 569px) and (orientation: portrait) {
+          @media (pointer: coarse) {
+              .responsive-div {
+                width: 530px;
+                height: 300px;
+              }
+              .video h2{
+                font-size : 120%;
+              }
+            /*  .mini h4 {
+                font-size : 0.9em;
+              }
+              .mini p{
+                font-size : 90%;
+              }*/
+              .video p{
+                font-size : 0.9em;
+              }
+              .maskhead i {
+                  font-size: 5.33vh;
+                }
+                .mask i {
+                  font-size: 5.33vh;
+                  }
+            }
+        }
+        /* Asus Zenbook Fold landscape */
+        @media (min-width: 850px) and (max-width: 854px) and (orientation: landscape) {
+                @media (pointer: coarse) {
+                .responsive-div {
+                  width: 380px;
+                  height: 300px;
+                }
+                .video h2{
+                    font-size : 110%;
+                  }
+       /*           .mini h4 {
+                    font-size : 0.7em;
+                  }
+                  .mini p{
+                    font-size : 70%;
+                  }*/
+
+                  .video p{
+                    font-size : 0.7em;
+                  }
+                  .maskhead i {
+                  font-size: 5.33vh;
+                }
+                .mask i {
+                  font-size: 5.33vh;
+                  }
+                  .mini .duration {
+                    padding: 0.33vh 0.33vh;
+                    font-size: 1.66vh;
+                  }
+                  .line-video .duration{
+                    padding: 0.33vh 0.33vh;
+                    font-size: 1.66vh;
+                  }
+              }
+            }
+            
+
+
+         /*---------------     NEST HUB MAX ----------------*/
+
+              /* Next Hub Max*/
+            @media (min-width: 1200px) and (max-width: 1280px) and (orientation: landscape) {
+                @media (pointer: coarse) {
+                .responsive-div {
+                  width: 600px;
+                  height: 490px;
+                }
+                .video h2{
+                  font-size : 120%;
+                }
+          /*      .mini h4 {
+                  font-size : 0.9em;
+                }
+                .mini p{
+                  font-size : 80%;
+                }  */
+                .video p{
+                  font-size : 0.9em;
+                }
+                .maskhead i {
+                  font-size: 5.33vh;
+                }
+                .mask i {
+                  font-size: 5.33vh;
+                  }
+                  .mini .duration {
+                    padding: 0.33vh 0.33vh;
+                    font-size: 1.66vh;
+                  }
+                  .line-video .duration{
+                    padding: 0.33vh 0.33vh;
+                    font-size: 1.66vh;
+                  }
+              }
+            }
+
+  .imageview{
+        width: 100%;
+        height: 100%;
+      }
+
+      .responsive-div {
+      width: 100%;
+      height: calc(20vw + 200px);
+      }
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+
+
+/* Desktop CSS */
+
+
+ @media  (min-width: 330px) and (max-width: 645px) {
+    /* Στυλ για iPhone SE (2nd & 3rd Gen) σε landscape */
+    @media (pointer: fine) {
+     
+      .single-channel {
+        flex-direction: column;
+      }
+    .responsive-div {
+      width: 100%;
+      height: calc(20vw + 150px);
+      }
+      .container-fluid{
+        width: 100%;
+      }
+      .d-flex {
+        display: block !important; 
+        }
+      .main-videos{
+        width: 100%;
+      }
+      .mini {
+        flex: 0 0 100%; /* Full width per image */
+    }
+      .col-md-3 {
+        flex: 1 1 100%;
+        width: 100%;
+      }
+      .video h2{
+        font-size : 90%;
+      }
+     .mini h4 {
+   /*      font-size : 0.8em;*/
+        margin-top: 4px;
+      }
+      .mini p{
+  /*      font-size : 70%;*/
+        margin-top: 0px;
+        margin-bottom: 6px;
+        line-height: 12px;
+      }
+      .video p{
+        font-size : 0.8em;
+      }
+      .main-videos{
+        width: 100%;
+      }
+      .mini {
+        flex: 0 0 100%; /* Full width per image */
+      }
+      .mini{
+        width: 100%!important;
+      }
+      .mini .area {
+        max-width: revert;
+      }
+      .line-video h4{
+        font-size: calc(0.75rem + .3vw); 
+      }
+      .line-video p {
+        font-size: calc(0.55rem + .3vw); 
+        line-height: 12px;
+      }
+      .line-video a{
+        font-size: calc(0.55rem + .3vw); 
+      }
+      .line-video .views{
+        font-size: calc(0.45rem + .3vw); 
+      }
+      .logorow{
+        height: 100%;
+      }
+      .mini .duration {
+        padding: 0.66vh 0.66vh;
+        font-size: 3.66vh;
+      }
+      .line-video .duration{
+        padding: 0.33vh 0.33vh;
+        font-size: 2.2vh;
+      }
+     
+    }
+  }
+
+  @media  (min-width: 330px) and (max-width: 576px) {
+    /* Στυλ για iPhone SE (2nd & 3rd Gen) σε landscape */
+    @media (pointer: fine) {
+
+      .line-video .duration{
+        padding: 0.66vh 0.66vh;
+        font-size: 3.66vh;
+      }
+      
+    }
+  }
+
+
+  @media  (min-width: 575px) and (max-width: 665px) {
+    /* Στυλ για iPhone SE (2nd & 3rd Gen) σε landscape */
+    @media (pointer: fine) {
+    /*  .line-video h4 {
+        font-size: 0.85em;
+      }*/
+      .single-channel p{
+     /*   font-size: 0.55em;*/
+        line-height: 12px;
+      }
+      .mini p{
+        line-height: 12px;
+      }
+
+    }
+  }
+
+
+  @media  (min-width: 645px) and (max-width: 665px) {
+    /* Στυλ για iPhone SE (2nd & 3rd Gen) σε landscape */
+    @media (pointer: fine) {
+      .responsive-div {
+        width: 620px;
+        height: calc(20vw + 283px);
+      }
+      .container-fluid{
+        width: 100%;
+      }
+      /*
+      .d-flex {
+        display: block !important; 
+        }
+      .flex-wrap{
+        display: block !important; 
+      }
+        */
+        .main-videos{
+        width: 100%;
+      }
+
+      .main-videos{
+        width: 100%;
+      }
+      .video {
+        flex: 0 0 100%; /* Full width per image */
+      }
+      .mini {
+        flex: 0 0 50%; /* Full width per image */
+      }
+      ul {
+            flex: 0 0 100%;
+             display: block;
+        }
+        .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+       
+    }
+    .video h2{
+      font-size : 120%;
+    }
+    .mini h4 {
+      font-size : 0.7em;
+    }
+    .mini p{
+      font-size : 60%;
+      margin-bottom: 10px;
+    }
+    .video p{
+      font-size : 0.9em;
+    }
+    }
+    
+  }
+
+  @media  (min-width: 665px) and (max-width: 750px) {
+    /* Στυλ για iPhone SE (2nd & 3rd Gen) σε landscape */
+    @media (pointer: fine) {
+   
+      .mini {
+        flex: 0 0 50%;
+      }
+   /*   .mini h4{
+        font-size: 0.6em;
+      }
+        */
+    }
+  }
+
+  @media  (min-width: 666) and (max-width: 3000px) { 
+    /* Στυλ για iPhone SE (2nd & 3rd Gen) σε landscape */
+    @media (pointer: fine) {
+    .responsive-div {
+      width: 100%;
+      height: calc(20vw + 200px);
+      }
+      .col-md-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .video h2{
+      font-size : 90%;
+    }
+    .mini h4 {
+      font-size : 0.7em;
+      margin-top: 9px;
+    }
+    .mini p{
+      font-size : 60%;
+      line-height: 12px;
+    }
+    .video p{
+      font-size : 0.7em;
+    }
+    .line-video h4{
+      font-size: 0.9em;
+    }
+    .line-video p{
+      line-height: 12px; 
+    }
+    .channel-bio p {
+      line-height: 12px;
+    }
+    .mini .duration {
+      padding: 0.33vh 0.33vh;
+      font-size: 1.66vh;
+    }
+    .line-video .duration{
+      padding: 0.33vh 0.33vh;
+      font-size: 1.66vh;
+    }
+    }
+  }
+  @media (min-width: 1200px) {
+	.mini .area {
+	  max-width: 100%; 
+	}
+	.img-fluid {
+		width : 100%
+	}
+  }
+
+
+/* Large screens */
+@media (min-width: 1920px) {
+	.mini .area {
+		max-width: 100%; /* Still no max-width restriction */
+	  }
+	  .img-fluid {
+		width : 100%
+	}
+  }
+  
+  /* Extra-large screens */
+  @media (min-width: 2560px) {
+	.mini .area {
+		max-width: 100%; /* Still no max-width restriction */
+	  }
+	  .img-fluid {
+		width : 100%
+	}
+  }
+  
+  /* Ultra-wide screens */
+  @media (min-width: 10240px) {
+	.mini .area {
+		max-width: 100%; /* Still no max-width restriction */
+	  }
+	  .img-fluid {
+		width : 100%
+	}
+  }
+
+
+  /* Setup for Cover Page */
+
+
+
+    .introArea {
+      position:fixed;
+      top:0;
+      left:0;
+      width:100vw;
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:flex-start;
+      overflow:hidden;
+      text-align:center;
+      background:#000;
+      font-family:Arial, Helvetica, sans-serif;
+      color:#fff;
+    }
+
+    .intro-logo {
+      width:20vw;
+      max-width:200px;
+      height:auto;
+      margin-top:2vh;
+    }
+
+    .contentWrapper {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      flex:1;
+      width:100%;
+    }
+
+    .coverTitle {
+      width:70vw;
+      max-width:900px;
+      font-size:2rem;
+      margin-bottom:0.5rem;
+      overflow:hidden;
+      display:-webkit-box;
+      -webkit-line-clamp:2;
+      -webkit-box-orient:vertical;
+      line-height:1.2;
+      word-break:break-word;
+      white-space: normal;
+      font-weight : 1000;
+
+    }
+       
+
+
+
+    .coverImg {
+      width:70vw;
+      max-width:900px;
+      height:50vh;
+      object-fit:contain;
+    }
+
+    .creatorLine {
+      width:70vw;
+      max-width:900px;
+      margin-top:0.5rem;
+      text-align:right;
+      font-size:1rem;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+
+   /* Landscape – shrink logo */
+    @media (orientation: landscape) and (max-width:1024px) {
+      .intro-logo {
+        width:10vw;
+        max-width:100px;
+      }
+    }
+
+      @media (orientation: portrait) {
+      .coverTitle {
+        -webkit-line-clamp:4;
+      }
+    }
+
+
+.overlay {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  z-index: 10;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  font-size: 1rem;
+  gap: 1rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+}
+
+
+.creator-panel {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 900px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.creator-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.2rem;
+}
+
+.creator-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.links a i {
+  margin-right: 8px;
+}
+
+
+@media (max-width: 600px) {
+  .overlay {
+    font-size: 0.85rem;
+  }
+
+  .creator-info .creator-name {
+    font-size: 0.9rem;
+  }
+
+  .links a {
+    font-size: 0.9rem;
+  }
+
+  .links a i {
+    font-size: 1rem;
+  }
+  .creator-info img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+

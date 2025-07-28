@@ -1,0 +1,331 @@
+
+
+ /* Extra Small Screens (iPhone 12) */
+ @media (max-width: 390px) {
+  .responsive-div {
+    width: 320px;
+    height: 200px;
+  }
+}
+
+
+/* Extra Small Screens (iPhone 12) */
+@media (min-width: 390px) and (max-width: 400px) {
+  .responsive-div {
+    width: 350px;
+    height: 220px;
+  }
+}
+
+/* Extra Small Screens (iPhone XR Landscape, Samsung Galaxy Ultra portrait) */
+@media (min-width: 401px) and (max-width: 420px) {
+  .responsive-div {
+    width: 370px;
+    height: 240px;
+  }
+}
+
+/* Extra Small Screens (iPhone XR Landscape, Samsung Galaxy Ultra portrait) */
+@media (min-width: 421px) and (max-width: 425px) {
+  .responsive-div {
+    width: 370px;
+    height: 240px;
+  }
+}
+
+ /* Extra Small Screens (iPhone 14) */
+ @media (min-width: 425px) and (max-width: 524px) {
+  .responsive-div {
+    width: 390px;
+    height: 250px;
+  }
+}
+
+   /* Extra Small Screens (iPhone 14) */
+   @media (min-width: 525px) and (max-width: 600px) {
+  .responsive-div {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
+
+
+
+ /* Extra Small Screens (iPhone XR) */
+ @media (min-width: 860px) and (max-width: 900px) and (orientation: landscape) {
+  .responsive-div {
+    width: 410px;
+    height: 300px;
+  }
+}
+
+
+
+
+/* Extra Small Screens (iPhone 12) */
+@media (min-width: 830px) and (max-width: 850px) and (orientation: landscape) {
+  .responsive-div {
+    width: 380px;
+    height: 300px;
+  }
+}
+
+
+
+ /* Extra Small Screens (iPhone 14, pixel 7, Samsung Galaxy Ultra) */
+ @media (min-width: 910px) and (max-width: 950px) and (orientation: landscape) {
+  .responsive-div {
+    width: 420px;
+    height: 310px;
+  }
+}
+
+/* Extra Small Screens (Samsung Galaxy 8  740) */
+@media (min-width: 730px) and (max-width: 780px) and (orientation: landscape) {
+  .responsive-div {
+    width: 330px;
+    height: 280px;
+  }
+}
+
+/* Extra Small Screens (Ipad mini) */
+@media (min-width: 750px) and (max-width: 780px) and (orientation: portrait) {
+  .responsive-div {
+    width: 350px;
+    height: 280px;
+  }
+}
+
+/* Extra Small Screens (Ipad air) */
+@media (min-width: 730px) and (max-width: 750px) and (orientation: portrait) {
+  .responsive-div {
+    width: 680px;
+    height: 430px;
+  }
+
+}
+
+  /* Ipad Screens (Ipad pro) */
+      @media (min-width: 770px) and (max-width: 1050px) and (orientation: portrait) {
+  .responsive-div {
+    width: 430px;
+    height: 300px;
+  }
+
+}
+
+/* Extra Small Screens (ipad air) */
+@media (min-width: 1060px) and (max-width: 1200px) and (orientation: landscape) {
+  .responsive-div {
+    width: 490px;
+    height: 350px;
+  }
+}
+
+/* Extra Small Screens (Samsung Galaxy 8  740) */
+@media (min-width: 1000px) and (max-width: 1050px) and (orientation: landscape) {
+  .responsive-div {
+    width: 480px;
+    height: 330px;
+  }
+}
+
+/* Ipad Screens (ipad pro) */
+@media (min-width: 1220px) and (max-width: 1300px) and (orientation: landscape) {
+  .responsive-div {
+    width: 560px;
+    height: 380px;
+  }
+}
+
+/* Surface Screens (surface pro) */
+@media (min-width: 1320px) and (max-width: 1500px) and (orientation: landscape) {
+  .responsive-div {
+    width: 640px;
+    height: 450px;
+  }
+}
+
+  /* Surface Screens (surface duo) */
+@media (min-width: 500px) and (max-width: 600px) and (orientation: portrait) {
+  .responsive-div {
+    width: 490px;
+    height: 400px;
+  }
+}
+
+      
+    /* Surface Screens (surface duo) */
+@media (min-width: 680px) and (max-width: 800px) and (orientation: landscape) {
+  .responsive-div {
+    width: 320px;
+    height: 250px;
+  }
+}
+      /* Surface Screens (surface duo) */
+  @media (min-width: 820px) and (max-width: 880px) and (orientation: landscape) {
+  .responsive-div {
+    width: 320px;
+    height: 250px;
+  }
+}
+
+
+
+/* Surface Screens (surface duo) */
+@media (min-width: 720px) and (max-width: 730px) and (orientation: portrait) {
+  .responsive-div {
+    width: 660px;
+    height: 400px;
+  }
+}
+
+
+   /* Asus Screens (Zenbook) */
+@media (min-width: 730px) and (max-width: 820px) and (orientation: portrait) {
+  .responsive-div {
+    width: 360px;
+    height: 250px;
+  }
+}
+@media (min-width: 600px) and (max-width: 700px) and (orientation: portrait) {
+  .responsive-div {
+    width: 300px;
+    height: 250px;
+  }
+
+}
+
+.responsive-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 1300px)  {
+  .responsive-div {
+    width: 600px;
+    height: 400px;
+  }
+}
+
+
+@media (min-width: 1500px)  {
+  .responsive-div {
+    width: 720px;
+    height: 480px;
+  }
+}
+
+@media (min-width: 1600px)  {
+  .responsive-div {
+    width: 720px;
+    height: 480px;
+  }
+}
+
+@media (min-width: 1710px)  {
+  .responsive-div {
+    width: 1200px;
+    height: 800px;
+  }
+}
+
+
+@media (min-width: 730px) and (max-width: 780px) and (orientation: portrait) {
+	.mini {
+        flex: 0 0 25%; /* Two images per row */
+    }
+}
+  /* Surface Screens (surface duo) */
+  @media (min-width: 500px) and (max-width: 600px) and (orientation: portrait) {
+	.mini {
+        flex: 0 0 25%; /* Two images per row */
+    }
+  }
+
+	/* Surface Screens (surface duo) */
+	@media (min-width: 650px) and (max-width: 800px) and (orientation: landscape) {
+	.mini {
+		flex: 0 0 50%; /* Two images per row */
+	}
+	}
+      /* Surface Screens (surface duo) */
+      @media (min-width: 650px) and (max-width: 800px) and (orientation: portrait) {
+		.mini {
+			flex: 0 0 50%; /* Two images per row */
+		}
+      }
+	  @media (min-width: 600px) and (max-width: 700px) and (orientation: portrait) {
+		.mini {
+			flex: 0 0 25%; /* Two images per row */
+		}
+		h4 {
+			font-size: 0.9em;
+		}
+		p {
+			line-height: 16px;
+			font-size : 0.8em;
+		}
+
+	  }
+
+/* Additional media query for iPad Air and iPad Pro specifically (portrait mode) */
+@media (min-width: 768px) and (max-width: 1600px) and (orientation: portrait) {
+    /* Ensure side-by-side layout for portrait mode */
+    .main-videos {
+        flex-direction: row !important; /* Video and ul side-by-side in portrait */
+    }
+
+    .video {
+        flex: 0 0 50%; /* 50% width for the video */
+        max-width: 50%; /* Ensure video takes 50% of the width */
+    }
+
+    ul {
+        flex: 0 0 50%; /* 50% width for the ul */
+        max-width: 50%; /* Ensure ul takes 50% of the width */
+    }
+
+    .mini {
+        flex: 0 0 50%; /* Two images per row */
+    }
+	.footer-ul{
+		max-width: 100%;
+	}
+	
+}
+@media (min-width: 600px) and (max-width: 700px) and (orientation: portrait) {
+	.main-videos {
+        flex-direction: row !important; /* Video and ul side-by-side in portrait */
+    }
+
+    .video {
+        flex: 0 0 50%; /* 50% width for the video */
+        max-width: 50%; /* Ensure video takes 50% of the width */
+    }
+
+    ul {
+        flex: 0 0 50%; /* 50% width for the ul */
+        max-width: 50%; /* Ensure ul takes 50% of the width */
+    }
+
+    .mini {
+        flex: 0 0 50%; /* Two images per row */
+    }
+	.footer-ul{
+		max-width: 100%;
+	}
+	
+	.button{
+		margin-top: 0px;
+		padding: 0px;
+	}
+
+  }
+.area {
+	position: relative;
+}
