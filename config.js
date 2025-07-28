@@ -1,9 +1,13 @@
-// Ανάλογα με κάποιο flag
-const isProd = window.location.hostname !== 'localhost';
+const configModule = await import(window.location.hostname !== '127.0.0.1' ? './config.prod.js' : './config.dev.js');
+const config = configModule.default;
 
-// Φόρτωσε δυναμικά το σωστό config
-const config = isProd
-  ? await import('./config.prod.js').then(mod => mod.default)
-  : await import('./config.dev.js').then(mod => mod.default);
+document.querySelectorAll('.cloud-images').forEach(img => {
+  const filename = img.getAttribute('data-src');
+  img.src = `${config.imagesBasePath}${filename}`;
+});
+document.querySelectorAll('.cloud-media').forEach(img => {
+  const filename = img.getAttribute('data-src');
+  img.src = `${config.mediaBasePath}${filename}`;
+});
 
 export default config;

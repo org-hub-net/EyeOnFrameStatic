@@ -21,7 +21,8 @@
 
                       // }
                      }
-                     return pType;
+                    // return pType;
+                    return 'video';
                 }
 
         return navObjectConstruct;

@@ -14,7 +14,7 @@ cloudinary.config({
 const validImageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp'];
 const validVideoExtensions = ['.mp4', '.mov', '.avi', '.mkv'];
 
-const uploadFolder = async (localFolder) => {
+const uploadFolder = async (localFolder, cloudinaryFolder) => {
   const files = fs.readdirSync(localFolder);
 
   for (const file of files) {
@@ -30,13 +30,13 @@ const uploadFolder = async (localFolder) => {
         resourceType = 'video';
       } else {
         console.log(`⏭ Skipping unsupported file type: ${file}`);
-        continue; // πάμε στο επόμενο αρχείο
+        continue;
       }
 
-      console.log(`🔼 Uploading ${file} to ${localFolder}`);
+      console.log(`🔼 Uploading ${file} to ${cloudinaryFolder}`);
 
       await cloudinary.uploader.upload(fullPath, {
-        folder: localFolder, // ανεβάζει στο cloudinary με το ίδιο όνομα folder (images ή media)
+        folder: cloudinaryFolder,
         resource_type: resourceType,
         use_filename: true,
         unique_filename: false,
@@ -48,8 +48,8 @@ const uploadFolder = async (localFolder) => {
 
 const main = async () => {
   try {
-    await uploadFolder('images');
-    await uploadFolder('media');
+    await uploadFolder('newimages', 'images'); // από τοπικό newimages → Cloudinary images
+    await uploadFolder('newmedia', 'media');   // από τοπικό newmedia → Cloudinary media
 
     console.log('✅ All files uploaded successfully!');
   } catch (err) {
@@ -58,4 +58,3 @@ const main = async () => {
 };
 
 main();
- 
