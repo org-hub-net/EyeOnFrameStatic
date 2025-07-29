@@ -16,6 +16,10 @@ const fullscreen = document.getElementById('fullscreen');
 const overlay = document.getElementById('overlay');
 const fullscreenBtn = document.getElementById('fullscreen');
 
+video.removeAttribute('controls');
+video.controls = false;
+
+
 // Helper: Format time
 function formatTime(seconds) {
   const minutes = Math.floor(seconds / 60);
@@ -138,7 +142,7 @@ next.addEventListener('click', () => {
 });
 
 
-
+/*
 fullscreenBtn.addEventListener('click', () => {
   if (!document.fullscreenElement) {
     // Ζητάμε fullscreen για το στοιχείο video
@@ -160,5 +164,28 @@ fullscreenBtn.addEventListener('click', () => {
     }
   }
 });
+*/
+
+document.getElementById('fullscreen').addEventListener('click', () => {
+  const video = document.getElementById('video');
+  goFullscreen(video);
+});
+
+
+function goFullscreen(videoElement) {
+  if (videoElement.requestFullscreen) {
+    videoElement.requestFullscreen();
+  } else if (videoElement.webkitEnterFullscreen) {
+    // iOS Safari
+    videoElement.webkitEnterFullscreen();
+  } else if (videoElement.webkitRequestFullscreen) {
+    // Older WebKit
+    videoElement.webkitRequestFullscreen();
+  } else if (videoElement.msRequestFullscreen) {
+    videoElement.msRequestFullscreen();
+  } else {
+    console.warn('Fullscreen not supported');
+  }
+}
 
 

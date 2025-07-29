@@ -38,7 +38,7 @@ document.querySelectorAll('.cloud-images').forEach(el => {
     el.src = src;
   } else if (el.tagName === 'VIDEO') {
     el.src = src;
-    el.setAttribute('controls', true);
+   // el.setAttribute('controls', true);
   }
 });
 
@@ -58,7 +58,7 @@ document.querySelectorAll('.cloud-media').forEach(el => {
     el.src = src;
   } else if (el.tagName === 'VIDEO') {
     el.src = src;
-    el.setAttribute('controls', true);
+   // el.setAttribute('controls', true);
   }
 });
 
