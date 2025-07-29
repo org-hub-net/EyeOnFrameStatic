@@ -13,6 +13,8 @@ document.querySelectorAll('.cloud-media').forEach(img => {
 export default config;
 */
 
+
+
 const configModule = await import(
   window.location.hostname !== '127.0.0.1'
     ? './config.prod.js'

@@ -4,7 +4,7 @@ const config = {
   imagesBasePath: `https://res.cloudinary.com/${cloudName}/image/upload/images/`,
   imagesBaseVideoPath: `https://res.cloudinary.com/${cloudName}/video/upload/images/`,
   mediaBasePath: `https://res.cloudinary.com/${cloudName}/video/upload/media/`,
-  mediaBaseImagesPath: `https://res.cloudinary.com/${cloudName}/video/upload/media/`
+  mediaBaseImagesPath: `https://res.cloudinary.com/${cloudName}/image/upload/media/`
 };
 
 export default config;  
