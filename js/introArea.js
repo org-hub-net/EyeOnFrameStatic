@@ -50,8 +50,8 @@
            
             
             if(window.location.hostname !== '127.0.0.1'){
-                 coverImg.layout.displayData({value: "https://res.cloudinary.com/dhe89ckz0/video/upload/media/Bresson.png",type:"imageSource"});
-                 imgIntro.layout.addImgSource("https://res.cloudinary.com/dhe89ckz0/video/upload/images/Logo3TemplateEyeblack.png");
+                 coverImg.layout.displayData({value: "https://res.cloudinary.com/dhe89ckz0/image/upload/media/Bresson.png",type:"imageSource"});
+                 imgIntro.layout.addImgSource("https://res.cloudinary.com/dhe89ckz0/image/upload/images/Logo3TemplateEyeblack.png");
             } else{
               coverImg.layout.displayData({value: "./media/Bresson.png",type:"imageSource"});
               imgIntro.layout.addImgSource("./images/Logo3TemplateEyeblack.png");

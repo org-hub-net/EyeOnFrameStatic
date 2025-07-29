@@ -1,6 +1,9 @@
 const config = {
   imagesBasePath: '/images/',
-  mediaBasePath: '/media/'
+  imagesBaseVideoPath: '/images/',
+  mediaBasePath: '/media/',
+  mediaBaseImagesPath: '/media/'
+
 };
 
 export default config;
