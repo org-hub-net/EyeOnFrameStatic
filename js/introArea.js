@@ -50,7 +50,7 @@
            
             
             if(window.location.hostname !== '127.0.0.1'){
-                 coverImg.layout.displayData({value: "https://res.cloudinary.com/dhe89ckz0/image/upload/media/Bresson.png",type:"imageSource"});
+                 coverImg.layout.displayData({value: "https://res.cloudinary.com/dhe89ckz0/image/upload/media/Cameron2iago.jpg",type:"imageSource"});
                  imgIntro.layout.addImgSource("https://res.cloudinary.com/dhe89ckz0/image/upload/images/Logo3TemplateEyeblack.png");
             } else{
               coverImg.layout.displayData({value: "./media/cameron2iago.jpg",type:"imageSource"});
