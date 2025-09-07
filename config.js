@@ -1,4 +1,3 @@
-
 const configModule = await import(
   window.location.hostname !== '127.0.0.1'
     ? './config.prod.js'
@@ -6,7 +5,6 @@ const configModule = await import(
 );
 const config = configModule.default;
 
-// Έγκυρες καταλήξεις αρχείων
 const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp'];
 const videoExtensions = ['.mp4', '.mov', '.avi', '.mkv', '.webm'];
 
@@ -38,7 +36,17 @@ document.querySelectorAll('.cloud-images').forEach(el => {
     el.src = src;
   } else if (el.tagName === 'VIDEO') {
     el.src = src;
-   // el.setAttribute('controls', true);
+
+    // poster image (ίδιο όνομα αρχείου αλλά jpg/png thumbnail στο Cloudinary)
+    const posterAttr = el.getAttribute('data-poster');
+    if (posterAttr) {
+      // Αν έχεις ορίσει `data-poster="thumbnail.jpg"` στο HTML
+      el.poster = `${config.imagesBasePath}${posterAttr}`;
+    } else {
+      // default: δοκίμασε το ίδιο όνομα με .jpg
+      const baseName = filename.substring(0, filename.lastIndexOf('.'));
+      el.poster = `${config.imagesBasePath}${baseName}.jpg`;
+    }
   }
 });
 
@@ -58,7 +66,15 @@ document.querySelectorAll('.cloud-media').forEach(el => {
     el.src = src;
   } else if (el.tagName === 'VIDEO') {
     el.src = src;
-   // el.setAttribute('controls', true);
+
+    // poster για video
+    const posterAttr = el.getAttribute('data-poster');
+    if (posterAttr) {
+      el.poster = `${config.mediaBaseImagesPath}${posterAttr}`;
+    } else {
+      const baseName = filename.substring(0, filename.lastIndexOf('.'));
+      el.poster = `${config.mediaBaseImagesPath}${baseName}.jpg`;
+    }
   }
 });
 

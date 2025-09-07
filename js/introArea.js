@@ -43,7 +43,7 @@
             var creatorLine = am$("creatorLine", contentWrapper.layout.id, "creatorLine", [], "p");
 
             // Values for Objects 
-            coverTitle.layout.displayData({value: "Bresson: Shooting a camera is ...",type:"innerHTML"});
+            coverTitle.layout.displayData({value: "Shooting a camera is ...",type:"innerHTML"});
 
       /*        var envpath = config.imagesBasePath;
              coverImg.layout.displayData({value: envpath+"Bresson.png",type:"imageSource"});     */
@@ -53,7 +53,7 @@
                  coverImg.layout.displayData({value: "https://res.cloudinary.com/dhe89ckz0/image/upload/media/Bresson.png",type:"imageSource"});
                  imgIntro.layout.addImgSource("https://res.cloudinary.com/dhe89ckz0/image/upload/images/Logo3TemplateEyeblack.png");
             } else{
-              coverImg.layout.displayData({value: "./media/Bresson.png",type:"imageSource"});
+              coverImg.layout.displayData({value: "./media/cameron2iago.jpg",type:"imageSource"});
               imgIntro.layout.addImgSource("./images/Logo3TemplateEyeblack.png");
             }
        
