@@ -1,71 +1,137 @@
-
+/*
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("App initialized");
-    var mnw = document.getElementById("mainWrapper");
+
+        var iArea = am$("amArea", "dskCanvas", "appArea");
+
+    amPage.navigation.getLocationProperties();
+
+
+    console.log(amPage);
+      // Δημιουργούμε instance
+        var artLibrary = videoLibrary(); 
+
+
+
 
     var introPart = introArea();
     introPart.createElement();
-    introFlashDisplay();
+    introFlashDisplay();    
 
-    
-  
-    function handleRouteChange(path) {
-       
-        
-        console.log("Route changed to:", path);
-        var imageView = document.getElementById("imageView");
-        var videoView = document.getElementById("videoView");
-        var navigationEl = navigationApp();
-        postType = navigationEl.getPostType();
-        
-        if (postType == "video") {
-            imageView.style.display = "none";
-            videoView.style.display = "block";
-        } else if (postType === "photo") {
-            videoView.style.display = "none";
-            imageView.style.display = "block";
-        } else {
-            videoView.style.display = "none";
-            imageView.style.display = "block";
-        }
-    
-      }
-    
-      // Handle the initial route
-   
+            // Popstate listener για back/forward buttons
+        window.addEventListener('popstate', (event) => {
+            var iArea = am$("amArea", "dskCanvas", "appArea");
+
+            amPage.navigation.getLocationProperties();
 
 
-    // Listen for browser back/forward button events
-    window.addEventListener("popstate", () => {
-
-        handleRouteChange(window.location.pathname);
-    });
-
-    // Example of navigating to /video
-    window.navigateTo = (path) => {
-
-        history.pushState({}, "", path);
-        handleRouteChange(path);
-    };
-  
+            console.log(amPage);
+            // Δημιουργούμε instance
+                var artLibrary = videoLibrary(); 
 
 
 
 
-     handleRouteChange(window.location.pathname);
-
-    
-
-    // must be replaced with amLib objects and functions for cover and navigation
-
+            var introPart = introArea();
+            introPart.createElement();
+            introFlashDisplay();    
+        })
 
   });
+
+
+
+
   
- 
-  
   
 
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("App initialized");
+
+  var iArea = am$("amArea", "dskCanvas", "appArea");
+
+  // 👉 Ορίζουμε router
+  function handleRouteChange(path) {
+    console.log("Routing to:", path);
+
+    // ενημερώνουμε τα navigation properties
+    amPage.navigation.getLocationProperties();
+
+    // βρίσκουμε το σωστό video
+    var artLibrary = videoLibrary();
+    var video = artLibrary.displayRequestedVideo();
+
+    console.log("Video loaded:", video);
+
+    // Αν δεν έχει αλλάξει navigation → intro
+    //if (amPage.navigation.hasChanged === false) {
+      var introPart = introArea();
+      introPart.createElement();
+      introFlashDisplay();
+    }
+//  }
+
+  // 👉 Χρησιμοποιούμε το pushState αντί για location.href
+  window.navigateTo = function (path) {
+    history.pushState({}, "", path); // αλλάζουμε URL χωρίς reload
+    handleRouteChange(path);
+  };
+
+  // 👉 Popstate για τα back/forward βελάκια
+  window.addEventListener("hashchange", (event) => {
+    console.log("popstate triggered:", window.location.pathname);
+    handleRouteChange(window.location.pathname);
+  });
+
+  // 👉 Πρώτη εκτέλεση (με το τρέχον URL)
+  handleRouteChange(window.location.pathname);
+});
 
 
 
+ */
+
+document.addEventListener("DOMContentLoaded", async () => {
+  console.log("🎬 App initialized");
+
+  var iArea = am$("amArea", "dskCanvas", "appArea");
+  // --- Router handler ---
+async function handleRouteChange() {
+    // 1️⃣ Ενημέρωση navigation properties
+    amPage.navigation.getLocationProperties();
+
+    // 2️⃣ Δημιουργούμε instance της βιβλιοθήκης
+    const artLibrary = videoLibrary();
+
+    // 3️⃣ Φορτώνουμε το video
+    const video = await artLibrary.displayRequestedVideo();
+
+    console.log("✅ Video loaded:", video);
+
+    // 4️⃣ Intro εμφανίζεται μόνο αν το URL δεν έχει αλλάξει
+    if (amPage.navigation.hasChanged === false) {
+        const introPart = introArea();
+        introPart.createElement();
+        introFlashDisplay();
+    }
+}
+
+
+  window.navigateTo = function(videoId) {
+    const newUrl = `?video=${videoId}`;
+    history.pushState({ video: videoId }, "", newUrl);
+    handleRouteChange(`?video=${videoId}`);
+};
+
+
+  // --- Back / Forward buttons ---
+  window.addEventListener("popstate", (event) => {
+    console.log("⬅️➡️ popstate triggered:", event.state, window.location.search);
+    handleRouteChange(window.location.search);
+  });
+
+  // --- Πρώτη εκτέλεση (τρέχον URL) ---
+  
+  await handleRouteChange(window.location.search);
+});

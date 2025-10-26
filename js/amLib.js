@@ -563,46 +563,65 @@
          
         // navigation 
 
-        self.navigation = {};
+       self.navigation = {};
         self.navigation.LocationProperties = {};
 
-        // Parameters for Galleries
-        self.navigation.paramName = '';
-        self.navigation.parameterPrevValue = 0;
-        self.navigation.parameterValue = 0;
-        self.navigation.LocationProperties.urlParams = [];
-        self.navigation.update = 0;
+        // θα κρατάμε λίστες παραμέτρων
+        self.navigation.previousParams = {};
+        self.navigation.currentParams = {};
+        self.navigation.hasChanged = false;
 
-         // a procedure in higher level
-        self.navigation.getLocationProperties = function(){
 
-            // in future this procedure must be updated 
-            //self.navigation.parameterValue = 0;
-            self.navigation.LocationProperties.hostname = window.location.hostname.toLowerCase();
-            self.navigation.LocationProperties.URLAddress = window.location.href.toLowerCase();
-            self.navigation.LocationProperties.protocol = window.location.protocol.toLowerCase();
-            self.navigation.LocationProperties.pathname = window.location.pathname.toLowerCase();
-            
-            self.navigation.LocationProperties.urlParams = new URLSearchParams();
-            var urlParms = new URLSearchParams(window.location.search);
-            for (const [name, value] of urlParms) {
-                self.navigation.LocationProperties.urlParams.append(name.toLowerCase(), value);
+     self.navigation.getLocationProperties = function() {
+
+    // Αποθήκευση βασικών properties
+    self.navigation.LocationProperties.hostname = window.location.hostname.toLowerCase();
+    self.navigation.LocationProperties.URLAddress = window.location.href.toLowerCase();
+    self.navigation.LocationProperties.protocol = window.location.protocol.toLowerCase();
+    self.navigation.LocationProperties.pathname = window.location.pathname.toLowerCase();
+
+    // --- Δημιουργούμε ένα νέο object για όλα τα params ---
+    let urlParams = new URLSearchParams(window.location.search);
+    self.navigation.currentParams = {};
+    for (const [name, value] of urlParams) {
+        self.navigation.currentParams[name.toLowerCase()] = value;
+    }
+
+    // --- Έλεγχος αλλαγών σε σχέση με previousParams ---
+    self.navigation.hasChanged = self.navigation.compareParams(
+        self.navigation.previousParams,
+        self.navigation.currentParams
+    );
+
+    // --- Τώρα αποθηκεύουμε τα current ως previous ---
+    self.navigation.previousParams = { ...self.navigation.currentParams };
+
+    backupPageToSession(amPage);
+};
+
+
+
+
+      self.navigation.compareParams = function(prev, curr) {
+            let prevKeys = Object.keys(prev);
+            let currKeys = Object.keys(curr);
+
+            if (prevKeys.length !== currKeys.length) {
+                return true;
             }
-            backupPageToSession(amPage);
 
-        }
-       
-       
-        self.navigation.setLocationProperties = function(paramPreValue, paramValue, paramName, update){
+            for (let key of currKeys) {
+                if (prev[key] !== curr[key]) {
+                    return true;
+                }
+            }
+            return false;
+        };
 
-            self.navigation.paramName = paramName;
-            self.navigation.parameterPrevValue = paramPreValue;
-            self.navigation.parameterValue = paramValue;
 
-            self.navigation.update = update;
-            backupPageToSession(amPage);
-        }
 
+
+        // End of Navigation 
 
 
         self.data.Error = ""; // Error in data manipulation
@@ -1001,40 +1020,35 @@
 
 
 
-    function restorePageObject(){
+  function restorePageObject() {
+    var amPage = new amLib.init('amPage', 'dskCanvas', 'Page');
+    var sessionPage = JSON.parse(sessionStorage.getItem('amPage'));
 
-            // Page additional methods
-            
-               var amPage = new amLib.init('amPage', 'dskCanvas', 'Page');
-               var sessionPage = JSON.parse(sessionStorage.getItem('amPage'));
-               if(typeof sessionPage!= 'undefined' && sessionPage!== null){   
-                   
-                        if( typeof sessionPage.amObjArray != 'undefined'){
-                         
-                                amPage.amObjArray = sessionPage.amObjArray;
-                                amPage.data.services = sessionPage.data.services;
-                                amPage.data.pageDataObj = sessionPage.data.pageDataObj;
-                                amPage.navigation.prevGallery = sessionPage.navigation.prevGallery;
-                                amPage.navigation.parameterPrevValue = sessionPage.navigation.parameterPrevValue;
-                                amPage.navigation.paramName = sessionPage.navigation.paramName;
-                                amPage.navigation.parameterValue = sessionPage.navigation.parameterValue;
-                                                    
-                        }else{
-                                amPage.amObjArray = [];
-                                amPage.data.services = [];
-                                amPage.data.pageDataObj = {};
-                        }
-      
-               }else{
-                   
-                    backupPageToSession(amPage);
+    if (sessionPage && sessionPage.amObjArray) {
 
-                }
-                   
-            return amPage;
+        amPage.amObjArray = sessionPage.amObjArray;
+        amPage.data.services = sessionPage.data.services;
+        amPage.data.pageDataObj = sessionPage.data.pageDataObj;
 
+        // navigation
+        amPage.navigation.prevGallery = sessionPage.navigation.prevGallery;
+        amPage.navigation.parameterPrevValue = sessionPage.navigation.parameterPrevValue;
+        amPage.navigation.paramName = sessionPage.navigation.paramName;
+        amPage.navigation.parameterValue = sessionPage.navigation.parameterValue;
 
+        // restore objects
+        amPage.navigation.previousParams = { ...sessionPage.navigation.previousParams };
+        amPage.navigation.currentParams = { ...sessionPage.navigation.currentParams };
+        amPage.navigation.hasChanged = sessionPage.navigation.hasChanged;
+
+    } else {
+        backupPageToSession(amPage);
     }
+
+    return amPage;
+}
+
+
 
 
     function backupPageToSession(amPage){
@@ -1042,6 +1056,9 @@
         //var tstPage = JSON.stringify(amPage);
 
         sessionStorage.setItem('amPage', JSON.stringify(amPage));
+
+
+       
 
     } 
 

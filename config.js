@@ -78,4 +78,11 @@ document.querySelectorAll('.cloud-media').forEach(el => {
   }
 });
 
+document.querySelectorAll('.vertical-align[data-video-id]').forEach(el => {
+  el.addEventListener('click', () => {
+    const videoId = el.getAttribute('data-video-id');
+    window.location.href = `${config.baseUrl}/index.html?video=${videoId}`;
+  });
+});
+
 export default config;

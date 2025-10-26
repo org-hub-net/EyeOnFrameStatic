@@ -25,6 +25,21 @@
                     return 'video';
                 }
 
+
+                    navObjectConstruct.getParamFromPath = function() {
+                        // Παίρνουμε το pathname, π.χ. "/article/123" ή "/video/abc"
+                        var cUrl = window.location.pathname.toLowerCase();
+
+                        // Σπάμε το path σε segments και αγνοούμε τα κενά
+                        var segments = cUrl.split('/').filter(Boolean); // "/article/123" -> ["article", "123"]
+
+                        // Παίρνουμε το πρώτο segment ως την "παράμετρο" που θέλουμε
+                        // Μπορείς να αλλάξεις το index αν θέλεις άλλο segment
+                        var param = segments.length > 0 ? segments[0] : '';
+
+                        return param; // π.χ. "article" ή "video"
+                    }
+
         return navObjectConstruct;
     
     }

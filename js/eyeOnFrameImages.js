@@ -238,12 +238,12 @@ const handleProgressBarClick = (event) => {
   // Event listeners
   //progressBarImg.addEventListener('input', assignElapsedTimeOnProgressbar);
   // Calculate elapsed time on click
-  fullscreenImg.addEventListener('click', goFullScreen);
-  progressBarImg.addEventListener('click', getElapsedTimeFromProgressBar);
-  playPauseBtnImg.addEventListener('click', togglePlayPause);
-  prevBtnImg.addEventListener('click', showPreviousPhoto);
-  nextBtnImg.addEventListener('click', showNextPhoto);
+//  fullscreenImg.addEventListener('click', goFullScreen);
+// progressBarImg.addEventListener('click', getElapsedTimeFromProgressBar);
+ // playPauseBtnImg.addEventListener('click', togglePlayPause);
+ // prevBtnImg.addEventListener('click', showPreviousPhoto);
+ // nextBtnImg.addEventListener('click', showNextPhoto);
   
   // Initial setup
-  loadPhoto(currentPhotoIndex);
+//  loadPhoto(currentPhotoIndex);
   

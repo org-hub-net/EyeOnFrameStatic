@@ -1,13 +1,16 @@
-const cloudName = 'dhe89ckz0'; // <-- Βάλε το δικό σου
+const cloudName = 'dhe89ckz0'; // <-- Βάλε το δικό σου Cloudinary όνομα
 
 const config = {
+  baseUrl: 'https://mydomain.com', // βάλε εδώ το production domain σου
+
   imagesBasePath: `https://res.cloudinary.com/${cloudName}/image/upload/images/`,
   imagesBaseVideoPath: `https://res.cloudinary.com/${cloudName}/video/upload/images/`,
   mediaBasePath: `https://res.cloudinary.com/${cloudName}/video/upload/media/`,
   mediaBaseImagesPath: `https://res.cloudinary.com/${cloudName}/image/upload/media/`
 };
 
-export default config;  
+export default config;
+
 
 /*
 Key : 121997437298889

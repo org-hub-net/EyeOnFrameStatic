@@ -42,8 +42,11 @@
             var coverImg = am$("coverImg", contentWrapper.layout.id, "coverImg", [], "img");
             var creatorLine = am$("creatorLine", contentWrapper.layout.id, "creatorLine", [], "p");
 
+
+
+
             // Values for Objects 
-            coverTitle.layout.displayData({value: "Shooting a camera is ...",type:"innerHTML"});
+            coverTitle.layout.displayData({value: "Photography",type:"innerHTML"});
 
       /*        var envpath = config.imagesBasePath;
              coverImg.layout.displayData({value: envpath+"Bresson.png",type:"imageSource"});     */
@@ -70,12 +73,16 @@
 
     }
 
+
+    /*
      introFlashDisplay = function(){
         
         // if null (first time) 
       
          refreshPage = sessionStorage.getItem('refreshPage');
           console.log("introFlashDisplay");
+
+
         
 
           if(refreshPage==null || refreshPage =="No"){
@@ -89,20 +96,67 @@
               }, 4000);
           
             }else{
-              /*
-            console.log("Not First Load -> disappear  intro ...");
-            var elem = document.getElementById("webCover");
-            elem.parentNode.removeChild(elem);
-            */
-            var timer = setInterval(function () {
-              clearInterval(timer);
-             fade(document.getElementById("amIntroArea"));
+
+                console.log("refreshing -> Fading intro ...")
+
+                if(amPage.navigation.hasChanged == false){
+                  var timer = setInterval(function () {
+                  clearInterval(timer);
+                  fade(document.getElementById("amIntroArea"));
               }, 2000);
-
+                }else{
+                  var timer = setInterval(function () {
+                  clearInterval(timer);
+                  fade(document.getElementById("amIntroArea"));
+                 },0);
+                }
+                
+           
              
-          }
+          } 
 
-      }
+      }*/
+
+introFlashDisplay = function () {
+    let refreshPage = sessionStorage.getItem('refreshPage');
+    console.log("introFlashDisplay");
+
+    const introElem = document.getElementById("amIntroArea");
+    if (!introElem) return;
+
+    // βεβαιωνόμαστε ότι ξεκινά ορατό
+    var mnw = document.getElementById("mainWrapper");
+    mnw.style.visibility = "hidden";  
+    introElem.style.visibility = "visible";
+    introElem.style.opacity = "1";
+
+    if (refreshPage == null || refreshPage == "No") {
+        sessionStorage.setItem("refreshPage", "Yes");
+
+        console.log("First Load -> Fading intro ...");
+
+        requestAnimationFrame(() => {
+            setTimeout(() => {
+                fade(introElem);
+            }, 4000); // πρώτη φορά -> 4s delay
+        });
+
+    } else {
+        console.log("refreshing -> Fading intro ...");
+
+        let delay = (amPage.navigation.hasChanged == false) ? 2000 : 0;
+
+        requestAnimationFrame(() => {
+            setTimeout(() => {
+                fade(introElem);
+            }, delay);
+        });
+    }
+}
+
+
+
+
 
 
 function fade(element) {
