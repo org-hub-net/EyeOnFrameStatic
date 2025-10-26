@@ -85,4 +85,5 @@ document.querySelectorAll('.vertical-align[data-video-id]').forEach(el => {
   });
 });
 
+window.config = config;
 export default config;
