@@ -1,7 +1,7 @@
 const cloudName = 'dhe89ckz0'; // <-- Βάλε το δικό σου Cloudinary όνομα
 
 const config = {
-  baseUrl: 'https://mydomain.com', // βάλε εδώ το production domain σου
+   baseUrl: 'https://org-hub-net.github.io/EyeOnFrameStatic',
 
   imagesBasePath: `https://res.cloudinary.com/${cloudName}/image/upload/images/`,
   imagesBaseVideoPath: `https://res.cloudinary.com/${cloudName}/video/upload/images/`,
