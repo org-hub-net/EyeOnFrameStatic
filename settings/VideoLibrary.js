@@ -57,6 +57,19 @@
         userPhoto: "foapth.jpg",
         profileUrl: "https://example.com/profile",
         cover: "No",
+      },
+      {
+        id: 990765,
+        title: "In the Darkroom",
+        urlParam: "tasos-niopas",
+        createDate: "2025-10-19",
+        userName: "Tasos Niopas",
+        views: 340,
+        dataSrc: "inthedarkroom_Ext.mp4",
+        dataPoster: "darkroom.jpg",
+        userPhoto: "foapth.jpg",
+        profileUrl: "https://example.com/profile",
+        cover: "No",
       }
     ];
 
