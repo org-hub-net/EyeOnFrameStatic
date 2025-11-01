@@ -79,7 +79,7 @@
         userName: "Tasos Niopas",
         views: 340,
         dataSrc: "thevalley.mp4",
-        dataPoster: "fontainExposure.png",
+        dataPoster: "treebasecropped.png",
         userPhoto: "foapth.jpg",
         profileUrl: "https://example.com/profile",
         cover: "No",
