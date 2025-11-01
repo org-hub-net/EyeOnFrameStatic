@@ -13,7 +13,7 @@
         createDate: "2025-09-02",
         userName: "Tasos Niopas",
         views: 120,
-        dataSrc: "Shooting_official2.mp4",
+        dataSrc: "Shooting_official.mp4",
         dataPoster: "Cameron2iago.jpg",
         userPhoto: "foapth.jpg",
         profileUrl: "https://example.com/profile",
