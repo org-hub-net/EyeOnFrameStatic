@@ -70,6 +70,19 @@
         userPhoto: "foapth.jpg",
         profileUrl: "https://example.com/profile",
         cover: "No",
+      },
+      {
+        id: 2288935,
+        title: "The Valley",
+        urlParam: "tasos-niopas",
+        createDate: "2025-10-19",
+        userName: "Tasos Niopas",
+        views: 340,
+        dataSrc: "thevalley.mp4",
+        dataPoster: "fontainExposure.png",
+        userPhoto: "foapth.jpg",
+        profileUrl: "https://example.com/profile",
+        cover: "No",
       }
     ];
 
