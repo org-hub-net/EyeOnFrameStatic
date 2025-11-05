@@ -13,6 +13,8 @@ h4{
   font-size: 12px;
 }
   
+
+
 #dskCanvas {
     width: 100vw; /* Viewport width */
     max-width: 100vw;
@@ -56,8 +58,13 @@ a:hover {
 }
 
 span {
-	color: #040303;
+	color: #000000;
 }
+
+.video-time {
+  color: #f4f0f0;
+}
+
 
 ul {
 	padding: 0;
@@ -2827,6 +2834,9 @@ footer h4 {
       padding: 0.33vh 0.33vh;
       font-size: 1.66vh;
     }
+    .miniu h4 {
+  font-size : 20px;
+}
     }
   }
   @media (min-width: 1200px) {
@@ -2836,6 +2846,21 @@ footer h4 {
 	.img-fluid {
 		width : 100%
 	}
+  .channel-bio p {
+  font-size : 15px;
+    }
+    .mini h4 {
+  font-size : 15px;
+}
+    .area h4 {
+  font-size : 15px;
+    }
+.video h2 {
+  font-size : 15px;
+}
+    .line-video h4 {
+  font-size : 15px;
+}
   }
 
 
@@ -2847,6 +2872,22 @@ footer h4 {
 	  .img-fluid {
 		width : 100%
 	}
+  .channel-bio p {
+  font-size : 20px;
+  line-height : 30px;
+}
+.mini h4 {
+  font-size : 20px;
+}
+    .area h4 {
+  font-size : 20px;
+    }
+.video h2 {
+  font-size : 20px;
+}
+    .line-video h4 {
+  font-size : 20px;
+}
   }
   
   /* Extra-large screens */
@@ -2857,7 +2898,24 @@ footer h4 {
 	  .img-fluid {
 		width : 100%
 	}
-  }
+  .channel-bio p {
+  font-size : 20px;
+  line-height : 35px;
+}
+.mini h4 {
+  font-size : 20px;
+}
+    .area h4 {
+  font-size : 20px;
+    }
+.video h2 {
+  font-size : 20px;
+}
+    .line-video h4 {
+  font-size : 20px;
+}
+}
+  
   
   /* Ultra-wide screens */
   @media (min-width: 10240px) {
@@ -2867,7 +2925,23 @@ footer h4 {
 	  .img-fluid {
 		width : 100%
 	}
-  }
+  .channel-bio p {
+  font-size : 20px;
+  line-height : 40px;
+}
+.mini h4 {
+  font-size : 20px;
+}
+    .area h4 {
+  font-size : 20px;
+}
+.video h2 {
+  font-size : 20px;
+}
+    .line-video h4 {
+  font-size : 20px;
+}
+}
 
 
   /* Setup for Cover Page */
